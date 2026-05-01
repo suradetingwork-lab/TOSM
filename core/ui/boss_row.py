@@ -3,12 +3,12 @@
 from datetime import datetime
 from typing import Optional
 
-from PyQt6.QtCore import Qt, pyqtSignal
+from PyQt6.QtCore import Qt, pyqtSignal, QPoint
 from PyQt6.QtGui import QColor, QFont, QPainter
 from PyQt6.QtWidgets import QFrame, QHBoxLayout, QLabel, QPushButton
 
 from .widgets import StarRatingWidget
-from .map_widgets import MapIconLabel
+from .map_widgets import MapImagePopup
 
 
 class BossRow(QFrame):
@@ -19,13 +19,13 @@ class BossRow(QFrame):
 
     _ROW_DEFAULT = """
         QFrame {
-            background: rgba(255, 255, 255, 0.025);
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            background: rgba(253, 250, 246, 0.85);
+            border: 1px solid rgba(54, 104, 141, 0.12);
             border-radius: 8px;
         }
         QFrame:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(99, 102, 241, 0.3);
+            background: rgba(54, 104, 141, 0.06);
+            border: 1px solid rgba(54, 104, 141, 0.28);
         }
     """
 
@@ -46,19 +46,25 @@ class BossRow(QFrame):
         # Boss Name
         self.name_label = QLabel("")
         self.name_label.setFont(QFont("Segoe UI", 10, QFont.Weight.Bold))
-        self.name_label.setStyleSheet("color: #E2E8F0; background: transparent;")
+        self.name_label.setStyleSheet("color: #1A2A38; background: transparent;")
         self.name_label.setFixedWidth(140)
         layout.addWidget(self.name_label)
 
-        # Map with icon popup
-        self.map_icon_label = MapIconLabel()
-        layout.addWidget(self.map_icon_label)
+        # Map label
+        self.map_label = QLabel("")
+        self.map_label.setFont(QFont("Segoe UI", 9))
+        self.map_label.setStyleSheet("color: #64748B; background: transparent;")
+        self.map_label.setFixedWidth(140)
+        layout.addWidget(self.map_label)
+        
+        self._popup = MapImagePopup(self)
+        self._popup.hide()
 
         # LV Badge
         self.lv_label = QLabel("")
         self.lv_label.setFont(QFont("Segoe UI", 9, QFont.Weight.Bold))
         self.lv_label.setStyleSheet("""
-            color: #475569;
+            color: #8A7A68;
             background: transparent;
             padding: 2px 6px;
             border-radius: 4px;
@@ -71,11 +77,11 @@ class BossRow(QFrame):
         self.channel_label = QLabel("")
         self.channel_label.setFont(QFont("Segoe UI", 9, QFont.Weight.Bold))
         self.channel_label.setStyleSheet("""
-            color: #475569;
-            background: rgba(255, 255, 255, 0.04);
+            color: #5A6A78;
+            background: rgba(54, 104, 141, 0.08);
             padding: 2px 6px;
             border-radius: 4px;
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(54, 104, 141, 0.20);
         """)
         self.channel_label.setFixedWidth(50)
         self.channel_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
@@ -85,11 +91,11 @@ class BossRow(QFrame):
         self.boss_status_label = QLabel("")
         self.boss_status_label.setFont(QFont("Segoe UI", 9, QFont.Weight.Bold))
         self.boss_status_label.setStyleSheet("""
-            color: #475569;
-            background: rgba(255, 255, 255, 0.04);
+            color: #8A7A68;
+            background: rgba(54, 104, 141, 0.06);
             padding: 2px 8px;
             border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(54, 104, 141, 0.15);
         """)
         self.boss_status_label.setFixedWidth(55)
         self.boss_status_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
@@ -98,7 +104,7 @@ class BossRow(QFrame):
         # Time
         self.time_label = QLabel("")
         self.time_label.setFont(QFont("Segoe UI", 10, QFont.Weight.Bold))
-        self.time_label.setStyleSheet("color: #475569; background: transparent;")
+        self.time_label.setStyleSheet("color: #8A7A68; background: transparent;")
         self.time_label.setFixedWidth(55)
         self.time_label.setAlignment(Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter)
         layout.addWidget(self.time_label)
@@ -106,7 +112,7 @@ class BossRow(QFrame):
         # Update Date
         self.update_date_label = QLabel("")
         self.update_date_label.setFont(QFont("Segoe UI", 9))
-        self.update_date_label.setStyleSheet("color: #334155; background: transparent;")
+        self.update_date_label.setStyleSheet("color: #A89880; background: transparent;")
         self.update_date_label.setFixedWidth(65)
         self.update_date_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(self.update_date_label)
@@ -123,19 +129,19 @@ class BossRow(QFrame):
         self.delete_btn.setCursor(Qt.CursorShape.PointingHandCursor)
         self.delete_btn.setStyleSheet("""
             QPushButton {
-                color: #475569;
+                color: #BDA589;
                 background: transparent;
-                border: 1px solid rgba(255, 255, 255, 0.07);
+                border: 1px solid rgba(189, 165, 137, 0.25);
                 border-radius: 5px;
                 padding: 0px;
             }
             QPushButton:hover {
-                color: #FDA4AF;
-                background: rgba(244, 63, 94, 0.15);
-                border: 1px solid rgba(244, 63, 94, 0.3);
+                color: #F18904;
+                background: rgba(241, 137, 4, 0.10);
+                border: 1px solid rgba(241, 137, 4, 0.40);
             }
             QPushButton:pressed {
-                background: rgba(244, 63, 94, 0.25);
+                background: rgba(241, 137, 4, 0.20);
             }
         """)
         self.delete_btn.clicked.connect(self._on_delete_clicked)
@@ -160,22 +166,28 @@ class BossRow(QFrame):
             full_name = name
         self.name_label.setText(display_name[:20])
         self.name_label.setToolTip(full_name)
-        self.map_icon_label.set_map_data(map_name if map_name and map_name != "" and map_name != "--" else "", map_lv, urgent, name)
+        
+        self._map_name = map_name if map_name and map_name != "--" else ""
+        self._map_lv = map_lv
+        self._boss_urgent = urgent
+        
+        self.map_label.setText(self._map_name[:30] if self._map_name else "")
+        self.map_label.setToolTip(self._map_name if self._map_name else "")
 
         if map_lv:
             self.lv_label.setText(map_lv)
             self.lv_label.setStyleSheet("""
-                color: #A5B4FC;
-                background: rgba(99, 102, 241, 0.18);
+                color: #1A5A80;
+                background: rgba(54, 104, 141, 0.14);
                 padding: 2px 6px;
                 border-radius: 4px;
-                border: 1px solid rgba(99, 102, 241, 0.35);
+                border: 1px solid rgba(54, 104, 141, 0.35);
                 font-weight: 700;
             """)
         else:
             self.lv_label.setText("")
             self.lv_label.setStyleSheet("""
-                color: #475569;
+                color: #A89880;
                 background: transparent;
                 padding: 2px 6px;
                 border-radius: 4px;
@@ -186,22 +198,22 @@ class BossRow(QFrame):
 
         if urgent and time != "--":
             self.time_label.setStyleSheet("""
-                color: #6EE7B7;
-                background: rgba(16, 185, 129, 0.15);
+                color: #B8860B;
+                background: rgba(243, 205, 5, 0.18);
                 padding: 2px 6px;
                 border-radius: 5px;
-                border: 1px solid rgba(16, 185, 129, 0.35);
+                border: 1px solid rgba(243, 205, 5, 0.50);
                 font-weight: 800;
             """)
         elif expired and time != "--":
             self.time_label.setStyleSheet("""
-                color: #334155;
+                color: #C0B0A0;
                 background: transparent;
                 font-weight: 500;
             """)
         else:
             self.time_label.setStyleSheet("""
-                color: #22D3EE;
+                color: #D4860A;
                 background: transparent;
                 font-weight: 700;
             """)
@@ -230,26 +242,26 @@ class BossRow(QFrame):
 
         if status == "N":
             self.boss_status_label.setStyleSheet("""
-                color: #A5B4FC;
-                background: rgba(99, 102, 241, 0.18);
+                color: #1A5A80;
+                background: rgba(54, 104, 141, 0.14);
                 padding: 2px 10px;
                 border-radius: 10px;
-                border: 1px solid rgba(99, 102, 241, 0.35);
+                border: 1px solid rgba(54, 104, 141, 0.35);
                 font-weight: 700;
             """)
         elif status.startswith("LV"):
             self.boss_status_label.setStyleSheet("""
-                color: #93C5FD;
-                background: rgba(59, 130, 246, 0.18);
+                color: #8B5E00;
+                background: rgba(244, 159, 5, 0.15);
                 padding: 2px 10px;
                 border-radius: 10px;
-                border: 1px solid rgba(59, 130, 246, 0.35);
+                border: 1px solid rgba(244, 159, 5, 0.40);
                 font-weight: 700;
             """)
         elif status == "Active":
             self.boss_status_label.setStyleSheet("""
-                color: #6EE7B7;
-                background: rgba(16, 185, 129, 0.18);
+                color: #16653A;
+                background: rgba(16, 185, 129, 0.14);
                 padding: 2px 10px;
                 border-radius: 10px;
                 border: 1px solid rgba(16, 185, 129, 0.35);
@@ -257,11 +269,11 @@ class BossRow(QFrame):
             """)
         else:
             self.boss_status_label.setStyleSheet("""
-                color: #475569;
-                background: rgba(255, 255, 255, 0.03);
+                color: #A89880;
+                background: rgba(189, 165, 137, 0.10);
                 padding: 2px 10px;
                 border-radius: 10px;
-                border: 1px solid rgba(255, 255, 255, 0.06);
+                border: 1px solid rgba(189, 165, 137, 0.20);
                 font-weight: 600;
             """)
 
@@ -274,24 +286,24 @@ class BossRow(QFrame):
         self.update_date_label.setText(update_date)
 
         if update_date == "--" or update_date == "":
-            self.update_date_label.setStyleSheet("color: #1E293B; background: transparent;")
+            self.update_date_label.setStyleSheet("color: #D0C0B0; background: transparent;")
             return
 
         if minutes_elapsed is not None:
             if minutes_elapsed <= 5:
-                color = "#22D3EE"
+                color = "#1A5A80"
             elif minutes_elapsed <= 10:
-                color = "#818CF8"
+                color = "#B8860B"
             elif minutes_elapsed <= 15:
-                color = "#FCD34D"
+                color = "#D4860A"
             elif minutes_elapsed <= 20:
-                color = "#FB923C"
+                color = "#C07010"
             elif minutes_elapsed > 30:
-                color = "#F87171"
+                color = "#A89880"
             else:
-                color = "#475569"
+                color = "#8A7A68"
         else:
-            color = "#334155"
+            color = "#BDA589"
 
         self.update_date_label.setStyleSheet(f"color: {color}; background: transparent; font-weight: 600;")
 
@@ -319,17 +331,17 @@ class BossRow(QFrame):
 
             mins = elapsed_secs // 60
             if mins <= 5:
-                color = "#22D3EE"
+                color = "#1A5A80"
             elif mins <= 10:
-                color = "#818CF8"
+                color = "#B8860B"
             elif mins <= 15:
-                color = "#FCD34D"
+                color = "#D4860A"
             elif mins <= 20:
-                color = "#FB923C"
+                color = "#C07010"
             elif mins > 30:
-                color = "#F87171"
+                color = "#A89880"
             else:
-                color = "#475569"
+                color = "#8A7A68"
 
             self.update_date_label.setText(text)
             self.update_date_label.setStyleSheet(
@@ -349,11 +361,11 @@ class BossRow(QFrame):
         super().paintEvent(event)
         status = self._current_status
         if status == 'Active':
-            accent = QColor(34, 197, 94, 220)
+            accent = QColor(22, 101, 58, 200)
         elif status.startswith('LV'):
-            accent = QColor(251, 191, 36, 200)
+            accent = QColor(212, 134, 10, 200)
         elif status == 'N':
-            accent = QColor(99, 102, 241, 180)
+            accent = QColor(54, 104, 141, 180)
         else:
             return
         painter = QPainter(self)
@@ -364,3 +376,18 @@ class BossRow(QFrame):
             painter.drawRoundedRect(2, 2, 3, self.height() - 4, 2, 2)
         finally:
             painter.end()
+
+    def enterEvent(self, event):
+        super().enterEvent(event)
+        if not hasattr(self, '_map_name') or not self._map_name:
+            return
+
+        self._popup.set_map_data(self._map_name, self._map_lv, self._boss_urgent, self._boss_name)
+
+        popup_pos = self.mapToGlobal(QPoint(0, 0))
+        popup_pos.setY(popup_pos.y() - self._popup.height() - 8)
+        self._popup.show_at(popup_pos)
+
+    def leaveEvent(self, event):
+        super().leaveEvent(event)
+        self._popup.hide()

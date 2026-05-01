@@ -1,4 +1,4 @@
-"""Summary statistics bar — Active / Upcoming ≤5m / Total Tracked cards."""
+"""Summary statistics bar — Coming / Soon / Total Tracked cards."""
 
 import json
 from datetime import datetime, timedelta
@@ -10,11 +10,10 @@ from PyQt6.QtWidgets import QWidget, QHBoxLayout, QFrame, QLabel
 
 
 class SummaryStatsBar(QWidget):
-    """Three metric cards shown above the boss table: Active | Upcoming ≤5m | Total Tracked."""
+    """Three metric cards shown above the boss table: Coming | Soon | Total Tracked."""
 
-    def __init__(self, data_path: str, parent=None):
+    def __init__(self, parent=None):
         super().__init__(parent)
-        self._data_path = data_path
 
         layout = QHBoxLayout(self)
         layout.setContentsMargins(0, 2, 0, 2)
@@ -22,14 +21,14 @@ class SummaryStatsBar(QWidget):
 
         self._cards: Dict[str, QLabel] = {}
         for key, label, color in [
-            ("coming",   "Coming",   "#22C55E"),
-            ("upcoming", "Upcoming", "#FCD34D"),
+            ("coming", "Coming", "#1A5A80"),
+            ("soon",   "Soon",   "#B8860B"),
         ]:
             frame = QFrame()
             frame.setStyleSheet(f"""
                 QFrame {{
-                    background: rgba(255, 255, 255, 0.03);
-                    border: 1px solid rgba(255, 255, 255, 0.06);
+                    background: rgba(255, 255, 255, 0.60);
+                    border: 1px solid rgba(54, 104, 141, 0.15);
                     border-left: 3px solid {color};
                     border-radius: 6px;
                 }}
@@ -44,7 +43,7 @@ class SummaryStatsBar(QWidget):
 
             txt_lbl = QLabel(label)
             txt_lbl.setFont(QFont("Segoe UI", 8))
-            txt_lbl.setStyleSheet("color: #475569; background: transparent; border: none;")
+            txt_lbl.setStyleSheet("color: #8A7A68; background: transparent; border: none;")
 
             fl.addWidget(val_lbl)
             fl.addWidget(txt_lbl)
@@ -53,38 +52,51 @@ class SummaryStatsBar(QWidget):
             self._cards[key] = val_lbl
             layout.addWidget(frame)
 
-        self._timer = QTimer(self)
-        self._timer.timeout.connect(self.refresh)
-        self._timer.start(60000)
-        self.refresh()
+        # The timer is removed because refresh will be called by OverlayWindow whenever data updates
 
-    def refresh(self):
-        try:
-            with open(self._data_path, 'r', encoding='utf-8') as f:
-                raw = json.load(f)
-        except Exception:
+    def refresh(self, boss_data: list = None):
+        if not boss_data:
+            self._cards['coming'].setText("0")
+            self._cards['soon'].setText("0")
             return
 
         now = datetime.now()
         coming = 0
-        upcoming = 0
+        soon = 0
 
-        for key, entry in raw.items():
-            for loc in entry.get('locations', {}).values():
-                history = loc.get('spawn_history', [])
-                if not history:
-                    continue
-                spawn_str = history[-1].get('spawn_time')
-                if not spawn_str:
-                    continue
+        for b in boss_data:
+            s = b.get('status', 'N')
+            cd = b.get('countdown', '')
+            has_scan_data = (
+                (b.get('time_display') and b.get('time_display') != '--') or
+                (cd and cd != '') or
+                (s and s not in ['N', '-', '--']) or
+                (b.get('last_updated') and b.get('last_updated') != '')
+            )
+            if not has_scan_data:
+                continue
+
+            spawn_str = b.get('spawn_time')
+            spawn_dt = None
+            if spawn_str:
                 try:
                     spawn_dt = datetime.fromisoformat(spawn_str)
-                    if spawn_dt > now:
-                        coming += 1
-                    elif spawn_dt < now:
-                        upcoming += 1
                 except (ValueError, TypeError):
                     pass
 
+            is_coming = False
+            is_soon = False
+
+            if s != "N" or (spawn_dt and spawn_dt < now):
+                is_coming = True
+            
+            if s == "N" or (spawn_dt and spawn_dt > now):
+                is_soon = True
+
+            if is_coming:
+                coming += 1
+            if is_soon:
+                soon += 1
+
         self._cards['coming'].setText(str(coming))
-        self._cards['upcoming'].setText(str(upcoming))
+        self._cards['soon'].setText(str(soon))

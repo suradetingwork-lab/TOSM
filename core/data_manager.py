@@ -142,8 +142,28 @@ class BossDataManager(QObject):
         self.boss_data: Dict[str, Any] = {}
         self._file_watcher = QFileSystemWatcher()
         self._watching_enabled = False
+        self._map_id_lookup: Dict[str, str] = {}  # boss_name_lower -> map_id
+        self._load_map_id_lookup()
         self.load_data()
         self._setup_file_watching()
+
+    def _load_map_id_lookup(self) -> None:
+        """Build a lookup table: lowercase boss name -> map id from data/map.json."""
+        map_path = Path(self.data_file).parent / 'data' / 'map.json'
+        if not map_path.exists():
+            # Try relative to cwd
+            map_path = Path('data') / 'map.json'
+        try:
+            with open(map_path, 'r', encoding='utf-8') as f:
+                map_data = json.load(f)
+            for entry in map_data:
+                boss_name = entry.get('boss', '').strip()
+                map_id = entry.get('id', '').strip()
+                if boss_name and map_id:
+                    self._map_id_lookup[boss_name.lower()] = map_id
+            print(f"[DataManager] Loaded {len(self._map_id_lookup)} boss id mappings from map.json")
+        except Exception as e:
+            print(f"[DataManager] Warning: Could not load map id lookup: {e}")
     
     def load_data(self) -> Dict[str, Any]:
         """
@@ -258,9 +278,13 @@ class BossDataManager(QObject):
         is_new = boss_key not in self.boss_data
         
         # Create or update record
+        # Resolve map_id from lookup table
+        map_id = self._map_id_lookup.get(normalized_name, "")
+
         if is_new:
             self.boss_data[boss_key] = {
                 "name": boss_name,
+                "map_id": map_id,
                 "channel": channel,
                 "type": boss_type,
                 "status": status,
@@ -269,12 +293,15 @@ class BossDataManager(QObject):
                 "spawn_count": 1,
                 "locations": {}
             }
-            print(f"[DataManager] New boss added: {boss_name} @ {channel} [{status}]")
+            print(f"[DataManager] New boss added: {boss_name} (id={map_id!r}) @ {channel} [{status}]")
         else:
             self.boss_data[boss_key]["last_updated"] = datetime.now().isoformat()
             self.boss_data[boss_key]["spawn_count"] = self.boss_data[boss_key].get("spawn_count", 0) + 1
             self.boss_data[boss_key]["status"] = status
             self.boss_data[boss_key]["type"] = boss_type
+            # Backfill map_id if missing (older records)
+            if map_id and not self.boss_data[boss_key].get("map_id"):
+                self.boss_data[boss_key]["map_id"] = map_id
         
         # Update location-specific data (map only, since channel is already in the main key)
         location_key = map_name

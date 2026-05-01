@@ -109,6 +109,9 @@ class OverlayWindow(QMainWindow):
         self._reset_boss_data()
         self.resize(820, self._collapsed_height)
         self._urgent_notified = set()
+        
+        if hasattr(self, '_summary_bar'):
+            self._summary_bar.refresh(self._boss_data)
 
     def _on_geom_anim_state_changed(self, new_state, old_state):
         effect = self.central_widget.graphicsEffect()
@@ -167,9 +170,9 @@ class OverlayWindow(QMainWindow):
     def _update_tab_styles(self) -> None:
         active_style = """
             QPushButton {
-                color: #C7D2FE;
-                background: rgba(99, 102, 241, 0.25);
-                border: 1px solid rgba(99, 102, 241, 0.45);
+                color: #1A5A80;
+                background: rgba(54, 104, 141, 0.18);
+                border: 1px solid rgba(54, 104, 141, 0.45);
                 border-radius: 12px;
                 padding: 3px 14px;
                 font-weight: 700;
@@ -177,17 +180,17 @@ class OverlayWindow(QMainWindow):
         """
         inactive_style = """
             QPushButton {
-                color: #475569;
+                color: #A89880;
                 background: transparent;
-                border: 1px solid rgba(255, 255, 255, 0.06);
+                border: 1px solid rgba(189, 165, 137, 0.20);
                 border-radius: 12px;
                 padding: 3px 14px;
                 font-weight: 600;
             }
             QPushButton:hover {
-                color: #94A3B8;
-                background: rgba(255, 255, 255, 0.05);
-                border: 1px solid rgba(255, 255, 255, 0.12);
+                color: #1A2A38;
+                background: rgba(54, 104, 141, 0.08);
+                border: 1px solid rgba(54, 104, 141, 0.25);
             }
         """
         for key, btn in self._tab_buttons.items():
@@ -270,6 +273,8 @@ class OverlayWindow(QMainWindow):
                 self._boss_data = saved_bosses.copy()
                 sorted_bosses = self._sort_bosses(self._boss_data)
                 self._update_display(sorted_bosses)
+                if hasattr(self, '_summary_bar'):
+                    self._summary_bar.refresh(self._boss_data)
                 return True
             return False
         except Exception:
@@ -320,8 +325,8 @@ class OverlayWindow(QMainWindow):
         self.setCentralWidget(self.central_widget)
 
         shadow = QGraphicsDropShadowEffect(self)
-        shadow.setBlurRadius(40)
-        shadow.setColor(QColor(0, 0, 0, 180))
+        shadow.setBlurRadius(30)
+        shadow.setColor(QColor(54, 104, 141, 60))
         shadow.setOffset(0, 4)
         self.central_widget.setGraphicsEffect(shadow)
 
@@ -329,11 +334,11 @@ class OverlayWindow(QMainWindow):
             QWidget {
                 background: qlineargradient(
                     x1: 0, y1: 0, x2: 0.2, y2: 1,
-                    stop: 0 rgba(10, 12, 24, 0.97),
-                    stop: 1 rgba(6, 8, 18, 0.98)
+                    stop: 0 rgba(245, 240, 232, 0.97),
+                    stop: 1 rgba(238, 232, 222, 0.98)
                 );
                 border-radius: 14px;
-                border: 1px solid rgba(255, 255, 255, 0.08);
+                border: 1px solid rgba(54, 104, 141, 0.30);
             }
         """)
 
@@ -342,7 +347,7 @@ class OverlayWindow(QMainWindow):
         self.layout.setSpacing(6)
 
         # ── Summary stats bar ──────────────────────────────────────
-        self._summary_bar = SummaryStatsBar(self._boss_data_path)
+        self._summary_bar = SummaryStatsBar()
 
         # ── Search / filter box ────────────────────────────────────
         search_container = QWidget()
@@ -357,15 +362,15 @@ class OverlayWindow(QMainWindow):
         self.search_box.setFixedHeight(26)
         self.search_box.setStyleSheet("""
             QLineEdit {
-                color: #94A3B8;
-                background: rgba(255, 255, 255, 0.04);
-                border: 1px solid rgba(255, 255, 255, 0.08);
+                color: #1A2A38;
+                background: rgba(255, 255, 255, 0.70);
+                border: 1px solid rgba(54, 104, 141, 0.20);
                 border-radius: 7px;
                 padding: 2px 10px;
             }
             QLineEdit:focus {
-                border: 1px solid rgba(99, 102, 241, 0.5);
-                background: rgba(99, 102, 241, 0.07);
+                border: 1px solid rgba(54, 104, 141, 0.60);
+                background: rgba(255, 255, 255, 0.90);
             }
         """)
         self.search_box.textChanged.connect(self._on_search_changed)
@@ -373,7 +378,7 @@ class OverlayWindow(QMainWindow):
 
         self.filter_count_label = QLabel("")
         self.filter_count_label.setFont(QFont("Segoe UI", 8))
-        self.filter_count_label.setStyleSheet("color: #334155; background: transparent;")
+        self.filter_count_label.setStyleSheet("color: #A89880; background: transparent;")
         self.filter_count_label.setFixedWidth(100)
         self.filter_count_label.setAlignment(Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter)
         self.filter_count_label.setVisible(False)
@@ -407,7 +412,7 @@ class OverlayWindow(QMainWindow):
             else:
                 header = QLabel(text)
                 header.setFont(QFont("Segoe UI", 9, QFont.Weight.Bold))
-                header.setStyleSheet("color: #334155; background: transparent; letter-spacing: 0.5px;")
+                header.setStyleSheet("color: #8A7A68; background: transparent; letter-spacing: 0.5px;")
             header.setFixedWidth(width)
             headers.addWidget(header)
 
@@ -425,17 +430,18 @@ class OverlayWindow(QMainWindow):
                 border: none;
             }
             QScrollBar:vertical {
-                background: transparent;
+                background: rgba(54, 104, 141, 0.06);
                 width: 6px;
                 margin: 4px 0;
+                border-radius: 3px;
             }
             QScrollBar::handle:vertical {
-                background: rgba(99, 102, 241, 0.35);
+                background: rgba(54, 104, 141, 0.30);
                 border-radius: 3px;
                 min-height: 24px;
             }
             QScrollBar::handle:vertical:hover {
-                background: rgba(99, 102, 241, 0.55);
+                background: rgba(54, 104, 141, 0.55);
             }
             QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
                 height: 0px;
@@ -466,7 +472,7 @@ class OverlayWindow(QMainWindow):
         div1 = QFrame()
         div1.setFrameShape(QFrame.Shape.HLine)
         div1.setFixedHeight(1)
-        div1.setStyleSheet("background: rgba(255, 255, 255, 0.06); border: none;")
+        div1.setStyleSheet("background: rgba(54, 104, 141, 0.12); border: none;")
 
         # ── Tab bar ────────────────────────────────────────────────
         tab_container = QWidget()
@@ -491,9 +497,9 @@ class OverlayWindow(QMainWindow):
         # ── Status bar ─────────────────────────────────────────────
         status_container = QWidget()
         status_container.setStyleSheet("""
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.55);
             border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(54, 104, 141, 0.18);
         """)
         status_layout = QHBoxLayout(status_container)
         status_layout.setContentsMargins(10, 5, 10, 5)
@@ -501,7 +507,7 @@ class OverlayWindow(QMainWindow):
 
         self.status_label = QLabel("◎  Ready — Alt+1 to scan")
         self.status_label.setFont(QFont("Segoe UI", 9))
-        self.status_label.setStyleSheet("color: #475569; background: transparent;")
+        self.status_label.setStyleSheet("color: #8A7A68; background: transparent;")
         status_layout.addWidget(self.status_label)
         status_layout.addStretch()
 
@@ -510,20 +516,20 @@ class OverlayWindow(QMainWindow):
         self.reset_btn.setCursor(Qt.CursorShape.PointingHandCursor)
         self.reset_btn.setStyleSheet("""
             QPushButton {
-                color: #64748B;
+                color: #8A7A68;
                 background: transparent;
-                border: 1px solid rgba(255, 255, 255, 0.07);
+                border: 1px solid rgba(189, 165, 137, 0.35);
                 border-radius: 6px;
                 padding: 4px 14px;
                 font-weight: 600;
             }
             QPushButton:hover {
-                color: #FDA4AF;
-                background: rgba(244, 63, 94, 0.1);
-                border: 1px solid rgba(244, 63, 94, 0.25);
+                color: #8B5E00;
+                background: rgba(244, 159, 5, 0.10);
+                border: 1px solid rgba(244, 159, 5, 0.40);
             }
             QPushButton:pressed {
-                background: rgba(244, 63, 94, 0.2);
+                background: rgba(244, 159, 5, 0.22);
             }
         """)
         self.reset_btn.clicked.connect(self._reset_boss_data)
@@ -533,7 +539,7 @@ class OverlayWindow(QMainWindow):
         div2 = QFrame()
         div2.setFrameShape(QFrame.Shape.HLine)
         div2.setFixedHeight(1)
-        div2.setStyleSheet("background: rgba(255, 255, 255, 0.06); border: none;")
+        div2.setStyleSheet("background: rgba(54, 104, 141, 0.12); border: none;")
 
         # ── Title bar ──────────────────────────────────────────────
         header_layout = QHBoxLayout()
@@ -542,12 +548,12 @@ class OverlayWindow(QMainWindow):
 
         title_dot = QLabel("◆")
         title_dot.setFont(QFont("Segoe UI", 9))
-        title_dot.setStyleSheet("color: #6366F1; background: transparent;")
+        title_dot.setStyleSheet("color: #D4860A; background: transparent;")
         header_layout.addWidget(title_dot)
 
         self.title_label = QLabel("Boss Tracker")
         self.title_label.setFont(QFont("Segoe UI", 10, QFont.Weight.Bold))
-        self.title_label.setStyleSheet("color: #94A3B8; background: transparent;")
+        self.title_label.setStyleSheet("color: #1A2A38; background: transparent;")
         header_layout.addWidget(self.title_label)
 
         header_layout.addStretch()
@@ -555,7 +561,7 @@ class OverlayWindow(QMainWindow):
         # Opacity control
         opacity_label = QLabel("○")
         opacity_label.setFont(QFont("Segoe UI", 10))
-        opacity_label.setStyleSheet("color: #334155; background: transparent;")
+        opacity_label.setStyleSheet("color: #A89880; background: transparent;")
         header_layout.addWidget(opacity_label)
 
         self.opacity_slider = QSlider(Qt.Orientation.Horizontal)
@@ -566,17 +572,17 @@ class OverlayWindow(QMainWindow):
             QSlider::groove:horizontal {
                 border-radius: 2px;
                 height: 3px;
-                background: rgba(255, 255, 255, 0.1);
+                background: rgba(54, 104, 141, 0.20);
             }
             QSlider::handle:horizontal {
-                background: #6366F1;
+                background: #36688D;
                 width: 10px;
                 height: 10px;
                 margin: -4px 0;
                 border-radius: 5px;
             }
             QSlider::sub-page:horizontal {
-                background: rgba(99, 102, 241, 0.5);
+                background: rgba(54, 104, 141, 0.55);
                 border-radius: 2px;
             }
         """)
@@ -590,14 +596,15 @@ class OverlayWindow(QMainWindow):
         self.lock_btn.setFont(QFont("Segoe UI", 8, QFont.Weight.Bold))
         self.lock_btn.setStyleSheet("""
             QPushButton {
-                color: #475569;
+                color: #8A7A68;
                 background: transparent;
-                border: 1px solid rgba(255, 255, 255, 0.07);
+                border: 1px solid rgba(189, 165, 137, 0.30);
                 border-radius: 6px;
             }
             QPushButton:hover {
-                color: #94A3B8;
-                background: rgba(255, 255, 255, 0.06);
+                color: #1A2A38;
+                background: rgba(54, 104, 141, 0.08);
+                border: 1px solid rgba(54, 104, 141, 0.30);
             }
         """)
         self.lock_btn.clicked.connect(self._toggle_lock)
@@ -611,18 +618,18 @@ class OverlayWindow(QMainWindow):
         self.stats_btn.setToolTip("Boss Statistics")
         self.stats_btn.setStyleSheet("""
             QPushButton {
-                color: #475569;
+                color: #8A7A68;
                 background: transparent;
-                border: 1px solid rgba(255, 255, 255, 0.07);
+                border: 1px solid rgba(189, 165, 137, 0.30);
                 border-radius: 6px;
             }
             QPushButton:hover {
-                color: #818CF8;
-                background: rgba(99, 102, 241, 0.12);
-                border: 1px solid rgba(99, 102, 241, 0.3);
+                color: #8B5E00;
+                background: rgba(243, 205, 5, 0.12);
+                border: 1px solid rgba(243, 205, 5, 0.40);
             }
             QPushButton:pressed {
-                background: rgba(99, 102, 241, 0.22);
+                background: rgba(243, 205, 5, 0.22);
             }
         """)
         self.stats_btn.clicked.connect(self._toggle_stats_window)
@@ -635,15 +642,15 @@ class OverlayWindow(QMainWindow):
         self.minimize_btn.setCursor(Qt.CursorShape.PointingHandCursor)
         self.minimize_btn.setStyleSheet("""
             QPushButton {
-                color: #475569;
+                color: #8A7A68;
                 background: transparent;
-                border: 1px solid rgba(255, 255, 255, 0.07);
+                border: 1px solid rgba(189, 165, 137, 0.30);
                 border-radius: 6px;
             }
             QPushButton:hover {
-                color: #94A3B8;
-                background: rgba(255, 255, 255, 0.07);
-                border: 1px solid rgba(255, 255, 255, 0.12);
+                color: #1A2A38;
+                background: rgba(54, 104, 141, 0.08);
+                border: 1px solid rgba(54, 104, 141, 0.30);
             }
         """)
         self.minimize_btn.clicked.connect(self._minimize_window)
@@ -656,15 +663,15 @@ class OverlayWindow(QMainWindow):
         self.maximize_btn.setCursor(Qt.CursorShape.PointingHandCursor)
         self.maximize_btn.setStyleSheet("""
             QPushButton {
-                color: #475569;
+                color: #8A7A68;
                 background: transparent;
-                border: 1px solid rgba(255, 255, 255, 0.07);
+                border: 1px solid rgba(189, 165, 137, 0.30);
                 border-radius: 6px;
             }
             QPushButton:hover {
-                color: #94A3B8;
-                background: rgba(255, 255, 255, 0.07);
-                border: 1px solid rgba(255, 255, 255, 0.12);
+                color: #1A2A38;
+                background: rgba(54, 104, 141, 0.08);
+                border: 1px solid rgba(54, 104, 141, 0.30);
             }
         """)
         self.maximize_btn.clicked.connect(self._maximize_window)
@@ -672,7 +679,7 @@ class OverlayWindow(QMainWindow):
 
         self.drag_hint = QLabel("Alt+Drag")
         self.drag_hint.setFont(QFont("Segoe UI", 8))
-        self.drag_hint.setStyleSheet("color: #1E293B; background: transparent;")
+        self.drag_hint.setStyleSheet("color: #C8B8A8; background: transparent;")
         header_layout.addWidget(self.drag_hint)
 
         # ── Assemble layout ────────────────────────────────────────
@@ -691,8 +698,8 @@ class OverlayWindow(QMainWindow):
         self.size_grip = QSizeGrip(self)
         self.size_grip.setStyleSheet("""
             QSizeGrip {
-                background: rgba(99, 102, 241, 0.2);
-                border: 1px solid rgba(99, 102, 241, 0.3);
+                background: rgba(54, 104, 141, 0.15);
+                border: 1px solid rgba(54, 104, 141, 0.30);
                 width: 12px;
                 height: 12px;
                 border-radius: 3px;
@@ -706,9 +713,9 @@ class OverlayWindow(QMainWindow):
             self.lock_btn.setText("Lock")
             self.lock_btn.setStyleSheet("""
                 QPushButton {
-                    color: #A5B4FC;
-                    background: rgba(99, 102, 241, 0.15);
-                    border: 1px solid rgba(99, 102, 241, 0.35);
+                    color: #1A5A80;
+                    background: rgba(54, 104, 141, 0.14);
+                    border: 1px solid rgba(54, 104, 141, 0.40);
                     border-radius: 6px;
                     font-weight: 700;
                 }
@@ -717,14 +724,14 @@ class OverlayWindow(QMainWindow):
             self.lock_btn.setText("Auto")
             self.lock_btn.setStyleSheet("""
                 QPushButton {
-                    color: #475569;
+                    color: #8A7A68;
                     background: transparent;
-                    border: 1px solid rgba(255, 255, 255, 0.07);
+                    border: 1px solid rgba(189, 165, 137, 0.30);
                     border-radius: 6px;
                 }
                 QPushButton:hover {
-                    color: #94A3B8;
-                    background: rgba(255, 255, 255, 0.06);
+                    color: #1A2A38;
+                    background: rgba(54, 104, 141, 0.08);
                 }
             """)
 
@@ -738,21 +745,26 @@ class OverlayWindow(QMainWindow):
             geo = self.geometry()
             self._stats_window.move(geo.x() + geo.width() + 12, geo.y())
             self._stats_window.show()
-            self._stats_window.refresh()
+            self._stats_window.refresh(self._boss_data)
 
     def _change_opacity(self, value):
         self._base_opacity = value / 100.0
         if not self.underMouse():
             self.setWindowOpacity(self._base_opacity)
 
+    def refresh_stats_window(self) -> None:
+        """Refresh the stats/checklist window if it exists."""
+        if self._stats_window is not None:
+            self._stats_window.refresh(self._boss_data)
+
     def show_snapshot_feedback(self) -> None:
         self.status_label.setText("◎  Scanning...")
-        self.status_label.setStyleSheet("color: #FCD34D; background: transparent;")
+        self.status_label.setStyleSheet("color: #B8860B; background: transparent;")
         self.repaint()
 
     def update_status(self, message: str) -> None:
         self.status_label.setText(message)
-        self.status_label.setStyleSheet("color: #818CF8; background: transparent;")
+        self.status_label.setStyleSheet("color: #1A5A80; background: transparent;")
 
     def set_close_callback(self, callback: Callable[[], None]) -> None:
         self._close_callback = callback
@@ -843,7 +855,9 @@ class OverlayWindow(QMainWindow):
         self._update_display(sorted_bosses)
         self._save_ui_state()
         if hasattr(self, '_summary_bar'):
-            self._summary_bar.refresh()
+            self._summary_bar.refresh(self._boss_data)
+        if self._stats_window is not None and self._stats_window.isVisible():
+            self._stats_window.refresh(self._boss_data)
 
     def _auto_sort_bosses(self) -> None:
         if not self._boss_data:
@@ -1031,7 +1045,7 @@ class OverlayWindow(QMainWindow):
                 break
         self._save_ui_state()
         self.status_label.setText(f"★  Rating saved — {name[:20]}")
-        self.status_label.setStyleSheet("color: #FCD34D; background: transparent;")
+        self.status_label.setStyleSheet("color: #B8860B; background: transparent;")
 
     def _sync_map_json_to_ui(self) -> None:
         pass

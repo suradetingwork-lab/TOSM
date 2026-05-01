@@ -35,9 +35,9 @@ class SortableHeaderButton(QPushButton):
         if self._sort_direction is not None:
             self.setStyleSheet(f"""
                 QPushButton {{
-                    color: #C7D2FE;
-                    background: rgba(99, 102, 241, 0.2);
-                    border: 1px solid rgba(99, 102, 241, 0.45);
+                    color: #1A5A80;
+                    background: rgba(54, 104, 141, 0.14);
+                    border: 1px solid rgba(54, 104, 141, 0.45);
                     border-radius: 5px;
                     padding: 3px 8px;
                     font-weight: 700;
@@ -45,20 +45,20 @@ class SortableHeaderButton(QPushButton):
                     text-align: {text_align};
                 }}
                 QPushButton:hover {{
-                    background: rgba(99, 102, 241, 0.35);
-                    border: 1px solid rgba(99, 102, 241, 0.65);
-                    color: #E0E7FF;
+                    background: rgba(54, 104, 141, 0.24);
+                    border: 1px solid rgba(54, 104, 141, 0.65);
+                    color: #0E3A58;
                 }}
                 QPushButton:pressed {{
-                    background: rgba(99, 102, 241, 0.5);
+                    background: rgba(54, 104, 141, 0.35);
                 }}
             """)
         else:
             self.setStyleSheet(f"""
                 QPushButton {{
-                    color: #64748B;
+                    color: #8A7A68;
                     background: transparent;
-                    border: 1px solid rgba(255, 255, 255, 0.05);
+                    border: 1px solid rgba(189, 165, 137, 0.22);
                     border-radius: 5px;
                     padding: 3px 8px;
                     font-weight: 600;
@@ -66,12 +66,12 @@ class SortableHeaderButton(QPushButton):
                     text-align: {text_align};
                 }}
                 QPushButton:hover {{
-                    color: #94A3B8;
-                    background: rgba(255, 255, 255, 0.05);
-                    border: 1px solid rgba(255, 255, 255, 0.12);
+                    color: #1A2A38;
+                    background: rgba(54, 104, 141, 0.07);
+                    border: 1px solid rgba(54, 104, 141, 0.25);
                 }}
                 QPushButton:pressed {{
-                    background: rgba(255, 255, 255, 0.08);
+                    background: rgba(54, 104, 141, 0.12);
                 }}
             """)
 
@@ -113,13 +113,13 @@ class StarRatingWidget(QWidget):
             star_btn.setProperty("star_value", i)
             star_btn.setStyleSheet("""
                 QPushButton {
-                    color: #334155;
+                    color: #D0C0B0;
                     background: transparent;
                     border: none;
                     padding: 0px;
                 }
                 QPushButton:hover {
-                    color: #FCD34D;
+                    color: #B8860B;
                 }
             """)
             star_btn.clicked.connect(self._on_star_clicked)
@@ -144,26 +144,26 @@ class StarRatingWidget(QWidget):
                 btn.setText("★")
                 btn.setStyleSheet("""
                     QPushButton {
-                        color: #FCD34D;
+                        color: #B8860B;
                         background: transparent;
                         border: none;
                         padding: 0px;
                     }
                     QPushButton:hover {
-                        color: #FDE68A;
+                        color: #8B5E00;
                     }
                 """)
             else:
                 btn.setText("☆")
                 btn.setStyleSheet("""
                     QPushButton {
-                        color: #334155;
+                        color: #D0C0B0;
                         background: transparent;
                         border: none;
                         padding: 0px;
                     }
                     QPushButton:hover {
-                        color: #FCD34D;
+                        color: #B8860B;
                     }
                 """)
 

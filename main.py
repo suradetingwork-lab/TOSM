@@ -180,12 +180,12 @@ class GameTrackerApp:
         self.app = QApplication(sys.argv)
         self.app.setQuitOnLastWindowClosed(False)
         
-        # Set dark theme for tooltips
+        # Set light theme for tooltips
         self.app.setStyleSheet("""
             QToolTip {
-                background-color: rgba(30, 30, 35, 0.95);
-                color: #F8FAFC;
-                border: 1px solid rgba(139, 92, 246, 0.5);
+                background-color: rgba(245, 240, 232, 0.97);
+                color: #1A2A38;
+                border: 1px solid rgba(54, 104, 141, 0.40);
                 padding: 6px 10px;
                 border-radius: 6px;
                 font-size: 12px;
@@ -202,7 +202,10 @@ class GameTrackerApp:
         self.vision = VisionProcessor(gemini_api_key, ollama_config, use_ollama)
         self.overlay = OverlayWindow()
         self.logger = BossDataLogger()
-        self.data_manager = BossDataManager()  # For boss data
+        # Ensure boss_data.json uses absolute path so all components read the same file
+        _base_dir = os.path.dirname(os.path.abspath(__file__))
+        _boss_data_path = os.path.join(_base_dir, 'boss_data.json')
+        self.data_manager = BossDataManager(_boss_data_path)  # For boss data
         self.map_data_manager = MapDataManager()  # For map.json sync
         self._frame_count = 0
         self._shutdown_called = False
@@ -216,6 +219,9 @@ class GameTrackerApp:
         
         # Connect map data manager file watching signal to UI
         self.map_data_manager.data_changed.connect(self._on_map_file_changed)
+        
+        # Auto-refresh checklist popup when boss_data.json changes
+        self.data_manager.data_changed.connect(self.overlay.refresh_stats_window)
         
         # Setup global hotkey for Ctrl+1 (works everywhere)
         self.global_hotkey = GlobalHotkey()
