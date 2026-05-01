@@ -1,0 +1,58 @@
+{
+  "indignant nebulas_CH.3": {
+    "name": "Indignant Nebulas",
+    "channel": "CH.3",
+    "type": "Demon",
+    "status": "Active",
+    "first_seen": "2026-03-18T15:06:10.245567",
+    "last_updated": "2026-03-18T15:06:10.249446",
+    "spawn_count": 3,
+    "locations": {
+      "Laukyme Swamp": {
+        "map": "Laukyme Swamp",
+        "spawn_history": [
+          {
+            "detected_at": "2026-03-18T15:06:10.245890",
+            "time_left": "03:37",
+            "spawn_time": "2026-03-18T15:09:47.245529",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-03-18T15:06:10.248202",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-03-18T15:06:10.249456",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "Active"
+          }
+        ]
+      }
+    }
+  },
+  "indignant nebulas_CH.1": {
+    "name": "Indignant Nebulas",
+    "channel": "CH.1",
+    "type": "Demon",
+    "status": "N",
+    "first_seen": "2026-03-18T15:06:10.250816",
+    "last_updated": "2026-03-18T15:06:10.250821",
+    "spawn_count": 1,
+    "locations": {
+      "Laukyme Swamp": {
+        "map": "Laukyme Swamp",
+        "spawn_history": [
+          {
+            "detected_at": "2026-03-18T15:06:10.250889",
+            "time_left": "05:20",
+            "spawn_time": "2026-03-18T15:11:30.250813",
+            "status": "N"
+          }
+        ]
+      }
+    }
+  }
+}

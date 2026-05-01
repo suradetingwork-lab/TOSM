@@ -1,0 +1,101 @@
+{
+  "cowardly gaigalas_CH.1": {
+    "name": "Cowardly Gaigalas",
+    "channel": "CH.1",
+    "first_seen": "2026-03-18T03:35:23.179709",
+    "last_updated": "2026-03-18T03:35:23.187763",
+    "spawn_count": 2,
+    "locations": {
+      "Laukyme Swamp": {
+        "map": "Laukyme Swamp",
+        "spawn_history": [
+          {
+            "detected_at": "2026-03-18T03:35:23.179748",
+            "time_left": "45:30",
+            "spawn_time": "2026-03-18T04:20:53.179694"
+          },
+          {
+            "detected_at": "2026-03-18T03:35:23.187770",
+            "time_left": "40:15",
+            "spawn_time": "2026-03-18T04:15:38.187760"
+          }
+        ]
+      }
+    }
+  },
+  "cowardly gaigalas_CH.2": {
+    "name": "Cowardly Gaigalas",
+    "channel": "CH.2",
+    "first_seen": "2026-03-18T03:35:23.188500",
+    "last_updated": "2026-03-18T03:35:23.188504",
+    "spawn_count": 1,
+    "locations": {
+      "Laukyme Swamp": {
+        "map": "Laukyme Swamp",
+        "spawn_history": [
+          {
+            "detected_at": "2026-03-18T03:35:23.188523",
+            "time_left": "01:20:00",
+            "spawn_time": "2026-03-18T04:55:23.188499"
+          }
+        ]
+      }
+    }
+  },
+  "indignant nebulas_CH.3": {
+    "name": "Indignant Nebulas",
+    "channel": "CH.3",
+    "type": "Demon",
+    "status": "Active",
+    "first_seen": "2026-03-18T04:02:03.285990",
+    "last_updated": "2026-03-18T04:02:03.295644",
+    "spawn_count": 3,
+    "locations": {
+      "Laukyme Swamp": {
+        "map": "Laukyme Swamp",
+        "spawn_history": [
+          {
+            "detected_at": "2026-03-18T04:02:03.286027",
+            "time_left": "03:37",
+            "spawn_time": "2026-03-18T04:05:40.285974",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-03-18T04:02:03.294844",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-03-18T04:02:03.295650",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "Active"
+          }
+        ]
+      }
+    }
+  },
+  "indignant nebulas_CH.1": {
+    "name": "Indignant Nebulas",
+    "channel": "CH.1",
+    "type": "Demon",
+    "status": "N",
+    "first_seen": "2026-03-18T04:02:03.296421",
+    "last_updated": "2026-03-18T04:02:03.296423",
+    "spawn_count": 1,
+    "locations": {
+      "Laukyme Swamp": {
+        "map": "Laukyme Swamp",
+        "spawn_history": [
+          {
+            "detected_at": "2026-03-18T04:02:03.296450",
+            "time_left": "05:20",
+            "spawn_time": "2026-03-18T04:07:23.296419",
+            "status": "N"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,450 @@
+[
+  {
+    "map": "Siauliai Miners Village",
+    "lv": "7",
+    "boss": "Cowardly Red Bube Warrior",
+    "type": "Beast",
+    "note": "REAL-TIME-TEST"
+  },
+  {
+    "map": "Crystal Mine",
+    "lv": "9",
+    "boss": "Strong Specter Lord",
+    "type": "Demon",
+    "note": ""
+  },
+  {
+    "map": "Nefritas Cliff",
+    "lv": "12",
+    "boss": "Strong Throneweaver",
+    "type": "Insect",
+    "note": ""
+  },
+  {
+    "map": "Tenet Garden",
+    "lv": "13",
+    "boss": "Strong Nepenthes",
+    "type": "Plant",
+    "note": ""
+  },
+  {
+    "map": "Tenet Church B1F",
+    "lv": "15",
+    "boss": "Cowardly Cyclops",
+    "type": "Demon",
+    "note": ""
+  },
+  {
+    "map": "Tenet Church 1F",
+    "lv": "17",
+    "boss": "Strong Malletwyvern",
+    "type": "Aberration",
+    "note": ""
+  },
+  {
+    "map": "Tenet Church 2F",
+    "lv": "19",
+    "boss": "Strong Necrovanter",
+    "type": "Demon",
+    "note": ""
+  },
+  {
+    "map": "Dadan Jungle",
+    "lv": "22",
+    "boss": "Strong Itiswort",
+    "type": "Plant",
+    "note": ""
+  },
+  {
+    "map": "Novaha Assembly Hall",
+    "lv": "24",
+    "boss": "Cowardly Mummygust",
+    "type": "Aberration",
+    "note": ""
+  },
+  {
+    "map": "Novaha Annex",
+    "lv": "26",
+    "boss": "Strong Velniamonkey",
+    "type": "Beast",
+    "note": ""
+  },
+  {
+    "map": "Novaha Institute",
+    "lv": "28",
+    "boss": "Indignant Deathweaver",
+    "type": "Demon",
+    "note": ""
+  },
+  {
+    "map": "Cobalt Forest",
+    "lv": "32",
+    "boss": "Cowardly Clymen",
+    "type": "Plant",
+    "note": ""
+  },
+  {
+    "map": "Septyni Glen",
+    "lv": "34",
+    "boss": "Strong Mothtem",
+    "type": "Insect",
+    "note": ""
+  },
+  {
+    "map": "Pelke Shrine Ruins",
+    "lv": "36",
+    "boss": "Strong Tutu",
+    "type": "Beast",
+    "note": ""
+  },
+  {
+    "map": "Absenta Reservoir",
+    "lv": "38",
+    "boss": "Indignant Hydra",
+    "type": "Aberration",
+    "note": "5 p"
+  },
+  {
+    "map": "Delmore Hamlet",
+    "lv": "44",
+    "boss": "Cowardly Reaverpede",
+    "type": "Insect",
+    "note": ""
+  },
+  {
+    "map": "Delmore Manor",
+    "lv": "46",
+    "boss": "Strong Grinender",
+    "type": "Plant",
+    "note": ""
+  },
+  {
+    "map": "Delmore Outskirts",
+    "lv": "48",
+    "boss": "Indignant Red Rambandgad",
+    "type": "Demon",
+    "note": ""
+  },
+  {
+    "map": "Uskis Arable Land",
+    "lv": "52",
+    "boss": "Strong Taumas",
+    "type": "Beast",
+    "note": "1"
+  },
+  {
+    "map": "Spring Light Woods",
+    "lv": "53",
+    "boss": "Cowardly Manticen",
+    "type": "Insect",
+    "note": ""
+  },
+  {
+    "map": "Gate Route",
+    "lv": "55",
+    "boss": "Strong Chafer",
+    "type": "Insect",
+    "note": "1"
+  },
+  {
+    "map": "Sirdgela Forest",
+    "lv": "57",
+    "boss": "Strong Archon",
+    "type": "Demon",
+    "note": "2"
+  },
+  {
+    "map": "Kvailas Forest",
+    "lv": "59",
+    "boss": "Indignant Bramble",
+    "type": "Plant",
+    "note": "0.5"
+  },
+  {
+    "map": "Zachariel Crossroads",
+    "lv": "62",
+    "boss": "Cowardly Vearkaras",
+    "type": "Aberration",
+    "note": "1"
+  },
+  {
+    "map": "Royal Mausoleum 1F",
+    "lv": "64",
+    "boss": "Strong Thumlord",
+    "type": "Aberration",
+    "note": ""
+  },
+  {
+    "map": "Royal Mausoleum 2F",
+    "lv": "66",
+    "boss": "Strong Gorkas",
+    "type": "Aberration",
+    "note": ""
+  },
+  {
+    "map": "Royal Mausoleum 3F",
+    "lv": "68",
+    "boss": "Angry Rexipher",
+    "type": "Aberration",
+    "note": "4 คนตี"
+  },
+  {
+    "map": "Baron Allerno",
+    "lv": "70",
+    "boss": "Cowardly Scorpio",
+    "type": "Insect",
+    "note": ""
+  },
+  {
+    "map": "Aqueduct Bridge Area",
+    "lv": "70",
+    "boss": "Strong Corrupted",
+    "type": "Aberration",
+    "note": "1"
+  },
+  {
+    "map": "Demon Prison District 1",
+    "lv": "71",
+    "boss": "Strong Blood",
+    "type": "Plant",
+    "note": "fast"
+  },
+  {
+    "map": "Demon Prison District 3",
+    "lv": "72",
+    "boss": "Cowardly Nuaele",
+    "type": "Demon",
+    "note": "0"
+  },
+  {
+    "map": "Demon Prison District 4",
+    "lv": "73",
+    "boss": "Strong Dionysus",
+    "type": "Beast",
+    "note": "FILTER-TEST"
+  },
+  {
+    "map": "Demon Prison District 5",
+    "lv": "74",
+    "boss": "Angry Demon Lord Hauberk",
+    "type": "Beast",
+    "note": ""
+  },
+  {
+    "map": "Goddess Ancient Garden",
+    "lv": "75",
+    "boss": "Strong Chapparition",
+    "type": "Demon",
+    "note": ""
+  },
+  {
+    "map": "Fedimian Suburbs",
+    "lv": "76",
+    "boss": "Cowardly Devilglove",
+    "type": "Aberration",
+    "note": ""
+  },
+  {
+    "map": "Mage Tower 1F",
+    "lv": "77",
+    "boss": "Strong Salamander",
+    "type": "Beast",
+    "note": "4"
+  },
+  {
+    "map": "Mage Tower 2F",
+    "lv": "78",
+    "boss": "Strong Mineloader",
+    "type": "Aberration",
+    "note": "4"
+  },
+  {
+    "map": "Mage Tower 3F",
+    "lv": "79",
+    "boss": "Indignant Helga Sircle",
+    "type": "Demon",
+    "note": ""
+  },
+  {
+    "map": "Penitence Route",
+    "lv": "80",
+    "boss": "Cowardly Glackuman",
+    "type": "Beast",
+    "note": "Boss hits"
+  },
+  {
+    "map": "Main Building",
+    "lv": "81",
+    "boss": "Strong Fireload",
+    "type": "Beast",
+    "note": "54"
+  },
+  {
+    "map": "Grand Corridor",
+    "lv": "82",
+    "boss": "Strong Riteris",
+    "type": "Aberration",
+    "note": "4"
+  },
+  {
+    "map": "Sanctuary",
+    "lv": "83",
+    "boss": "Indignant Naktis",
+    "type": "Demon",
+    "note": "3"
+  },
+  {
+    "map": "Laukyme Swamp",
+    "lv": "85",
+    "boss": "Cowardly Gaigalas",
+    "type": "Beast",
+    "note": ""
+  },
+  {
+    "map": "Tyla Monastery",
+    "lv": "86",
+    "boss": "Strong Teraox",
+    "type": "Beast",
+    "note": ""
+  },
+  {
+    "map": "Bellai Rainforest",
+    "lv": "87",
+    "boss": "Strong Ferretmaraude",
+    "type": "Insect",
+    "note": "4"
+  },
+  {
+    "map": "Zeraha",
+    "lv": "88",
+    "boss": "Strong Kirmeleech",
+    "type": "Insect",
+    "note": "F"
+  },
+  {
+    "map": "Seir Rainforest",
+    "lv": "89",
+    "boss": "Indignant Zaura",
+    "type": "Demon",
+    "note": "1"
+  },
+  {
+    "map": "Coastal Fortress",
+    "lv": "90",
+    "boss": "Strong Stone Whale",
+    "type": "Aberration",
+    "note": "4"
+  },
+  {
+    "map": "Dingofasil District",
+    "lv": "91",
+    "boss": "Strong Minotaurs",
+    "type": "Beast",
+    "note": ""
+  },
+  {
+    "map": "Storage Quarter",
+    "lv": "92",
+    "boss": "Strong Sitrygailla",
+    "type": "Insect",
+    "note": "1"
+  },
+  {
+    "map": "Fortress Battlegrounds",
+    "lv": "93",
+    "boss": "Indignant Marnox",
+    "type": "Beast",
+    "note": "H117"
+  },
+  {
+    "map": "Alemeth Forest",
+    "lv": "95",
+    "boss": "Strong Colimencia",
+    "type": "Plant",
+    "note": "4"
+  },
+  {
+    "map": "Barha Forest",
+    "lv": "98",
+    "boss": "Strong Sequoia",
+    "type": "Aberration",
+    "note": "5"
+  },
+  {
+    "map": "Kalejimas Lounge",
+    "lv": "101",
+    "boss": "Strong Neop",
+    "type": "Insect",
+    "note": ""
+  },
+  {
+    "map": "Investigation Room",
+    "lv": "103",
+    "boss": "Indignant Nebulas",
+    "type": "Demon",
+    "note": ""
+  },
+  {
+    "map": "Nheto Forest",
+    "lv": "105",
+    "boss": "Strong Dionia",
+    "type": "Dark",
+    "note": ""
+  },
+  {
+    "map": "Svalphinghas Forest",
+    "lv": "107",
+    "boss": "Strong Ellaganos",
+    "type": "",
+    "note": ""
+  },
+  {
+    "map": "Lhadar Forest",
+    "lv": "109",
+    "boss": "Strong Ebonyphone",
+    "type": "",
+    "note": ""
+  },
+  {
+    "map": "Tevhrin Stalactite Cave 1",
+    "lv": "111",
+    "boss": "Strong Gazing Golem",
+    "type": "",
+    "note": ""
+  },
+  {
+    "map": "Tevhrin Stalactite Cave 2",
+    "lv": "113",
+    "boss": "Indignant Zesty of Destruction",
+    "type": "",
+    "note": ""
+  },
+  {
+    "map": "Jonael Memorial Dist.",
+    "lv": "115",
+    "boss": "Strong Ironbaum",
+    "type": "",
+    "note": ""
+  },
+  {
+    "map": "Jeromel Square",
+    "lv": "118",
+    "boss": "Strong Diena",
+    "type": "",
+    "note": ""
+  },
+  {
+    "map": "Taniel I Memorial Dist.",
+    "lv": "120",
+    "boss": "Strong Ginklass",
+    "type": "",
+    "note": ""
+  },
+  {
+    "map": "Timerys Temple",
+    "lv": "123",
+    "boss": "Indignant Algis",
+    "type": "",
+    "note": ""
+  }
+]

@@ -1,0 +1,12 @@
+pygetwindow>=0.0.9
+mss>=9.0.1
+opencv-python>=4.9.0
+paddleocr>=2.7.0
+PyQt6>=6.6.1
+numpy>=1.26.0
+pillow>=10.2.0
+pywin32>=306
+easyocr>=1.7.0
+google-generativeai>=0.3.0
+requests>=2.31.0
+matplotlib>=3.8.0
