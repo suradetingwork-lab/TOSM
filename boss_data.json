@@ -120,8 +120,8 @@
     "type": "",
     "status": "N",
     "first_seen": "2026-04-21T08:48:54.207827",
-    "last_updated": "2026-05-01T01:58:21.357783",
-    "spawn_count": 7,
+    "last_updated": "2026-05-02T16:44:33.096141",
+    "spawn_count": 9,
     "locations": {
       "Jonael Memorial Dist.": {
         "map": "Jonael Memorial Dist.",
@@ -166,6 +166,18 @@
             "detected_at": "2026-05-01T01:58:21.357786",
             "time_left": "00:33:12",
             "spawn_time": "2026-05-01T02:31:33.357781",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T11:33:52.850102",
+            "time_left": "01:21:43",
+            "spawn_time": "2026-05-02T12:55:35.850096",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T16:44:33.096147",
+            "time_left": "01:18:48",
+            "spawn_time": "2026-05-02T18:03:21.096136",
             "status": "N"
           }
         ]
@@ -246,73 +258,73 @@
     "name": "Strong Kirmeleech",
     "channel": "CH. 1",
     "type": "Insect",
-    "status": "LV2",
+    "status": "N",
     "first_seen": "2026-04-21T10:06:06.550190",
-    "last_updated": "2026-05-01T18:17:24.964608",
-    "spawn_count": 32,
+    "last_updated": "2026-05-02T17:12:58.057867",
+    "spawn_count": 44,
     "locations": {
       "Zeraha": {
         "map": "Zeraha",
         "spawn_history": [
           {
-            "detected_at": "2026-05-01T01:00:44.906477",
-            "time_left": "00:14:02",
-            "spawn_time": "2026-05-01T01:14:46.906463",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-05-01T02:02:29.663214",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
-          {
-            "detected_at": "2026-05-01T02:11:10.922950",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV3"
-          },
-          {
-            "detected_at": "2026-05-01T02:18:41.610809",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV4"
-          },
-          {
-            "detected_at": "2026-05-01T02:21:59.777661",
-            "time_left": "01:00:50",
-            "spawn_time": "2026-05-01T03:22:49.777638",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-05-01T17:18:49.168004",
+            "detected_at": "2026-05-02T12:38:56.841271",
             "time_left": "",
             "spawn_time": null,
             "status": "LV1"
           },
           {
-            "detected_at": "2026-05-01T17:19:13.590737",
+            "detected_at": "2026-05-02T13:22:53.322662",
+            "time_left": "01:02:18",
+            "spawn_time": "2026-05-02T14:25:11.322651",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:25:39.272020",
             "time_left": "",
             "spawn_time": null,
             "status": "LV1"
           },
           {
-            "detected_at": "2026-05-01T17:50:30.839881",
+            "detected_at": "2026-05-02T14:53:59.554775",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T15:27:28.106368",
             "time_left": "",
             "spawn_time": null,
             "status": "LV2"
           },
           {
-            "detected_at": "2026-05-01T18:16:57.534367",
+            "detected_at": "2026-05-02T15:34:45.631380",
+            "time_left": "00:50:42",
+            "spawn_time": "2026-05-02T16:25:27.631370",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T16:35:40.238186",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T16:43:44.756847",
             "time_left": "",
             "spawn_time": null,
             "status": "LV2"
           },
           {
-            "detected_at": "2026-05-01T18:17:24.964615",
+            "detected_at": "2026-05-02T16:50:11.180979",
             "time_left": "",
             "spawn_time": null,
             "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T17:12:58.057876",
+            "time_left": "01:00:24",
+            "spawn_time": "2026-05-02T18:13:22.057860",
+            "status": "N"
           }
         ]
       }
@@ -323,73 +335,73 @@
     "name": "Cowardly Gaigalas",
     "channel": "CH. 1",
     "type": "Beast",
-    "status": "N",
+    "status": "LV2",
     "first_seen": "2026-04-21T10:11:07.066305",
-    "last_updated": "2026-05-01T02:02:57.099824",
-    "spawn_count": 17,
+    "last_updated": "2026-05-02T17:54:06.508861",
+    "spawn_count": 36,
     "locations": {
       "Laukyme Swamp": {
         "map": "Laukyme Swamp",
         "spawn_history": [
           {
-            "detected_at": "2026-04-25T17:01:52.221530",
-            "time_left": "00:48:35",
-            "spawn_time": "2026-04-25T17:50:27.221521",
+            "detected_at": "2026-05-02T13:58:48.451479",
+            "time_left": "00:56:03",
+            "spawn_time": "2026-05-02T14:54:51.451466",
             "status": "N"
           },
           {
-            "detected_at": "2026-04-25T23:12:02.052879",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV3"
-          },
-          {
-            "detected_at": "2026-04-25T23:17:20.743249",
-            "time_left": "00:48:49",
-            "spawn_time": "2026-04-26T00:06:09.743242",
+            "detected_at": "2026-05-02T14:06:05.699934",
+            "time_left": "00:48:47",
+            "spawn_time": "2026-05-02T14:54:52.699927",
             "status": "N"
           },
           {
-            "detected_at": "2026-04-26T00:35:42.902587",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
-          {
-            "detected_at": "2026-04-26T00:42:34.516050",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
-          {
-            "detected_at": "2026-04-26T00:46:14.228335",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV3"
-          },
-          {
-            "detected_at": "2026-04-26T00:50:28.021295",
-            "time_left": "00:50:04",
-            "spawn_time": "2026-04-26T01:40:32.021286",
+            "detected_at": "2026-05-02T14:24:33.422460",
+            "time_left": "00:30:19",
+            "spawn_time": "2026-05-02T14:54:52.422448",
             "status": "N"
           },
           {
-            "detected_at": "2026-05-01T01:03:14.242017",
+            "detected_at": "2026-05-02T14:54:32.690983",
+            "time_left": "00:00:18",
+            "spawn_time": "2026-05-02T14:54:50.690975",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T15:28:05.037660",
             "time_left": "",
             "spawn_time": null,
             "status": "LV1"
           },
           {
-            "detected_at": "2026-05-01T01:22:02.239142",
+            "detected_at": "2026-05-02T15:35:52.759914",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T16:10:36.919394",
+            "time_left": "00:43:40",
+            "spawn_time": "2026-05-02T16:54:16.919385",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T17:09:16.858134",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T17:32:26.646740",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T17:54:06.508871",
             "time_left": "",
             "spawn_time": null,
             "status": "LV2"
-          },
-          {
-            "detected_at": "2026-05-01T02:02:57.099833",
-            "time_left": "00:42:38",
-            "spawn_time": "2026-05-01T02:45:35.099818",
-            "status": "N"
           }
         ]
       }
@@ -400,73 +412,73 @@
     "name": "Strong Teraox",
     "channel": "CH. 1",
     "type": "Beast",
-    "status": "LV1",
+    "status": "N",
     "first_seen": "2026-04-21T10:20:41.762366",
-    "last_updated": "2026-05-01T02:02:50.927761",
-    "spawn_count": 15,
+    "last_updated": "2026-05-02T17:53:58.920667",
+    "spawn_count": 35,
     "locations": {
       "Tyla Monastery": {
         "map": "Tyla Monastery",
         "spawn_history": [
           {
-            "detected_at": "2026-04-25T16:39:21.264872",
+            "detected_at": "2026-05-02T14:12:08.658626",
             "time_left": "",
             "spawn_time": null,
             "status": "LV1"
           },
           {
-            "detected_at": "2026-04-25T16:58:47.817057",
+            "detected_at": "2026-05-02T14:12:19.179258",
             "time_left": "",
             "spawn_time": null,
             "status": "LV2"
           },
           {
-            "detected_at": "2026-04-25T17:09:42.630749",
+            "detected_at": "2026-05-02T14:12:59.943460",
             "time_left": "",
             "spawn_time": null,
             "status": "LV2"
           },
           {
-            "detected_at": "2026-04-25T17:19:48.159523",
+            "detected_at": "2026-05-02T14:18:09.480738",
             "time_left": "",
             "spawn_time": null,
-            "status": "LV3"
-          },
-          {
-            "detected_at": "2026-04-25T17:30:46.181315",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV3"
-          },
-          {
-            "detected_at": "2026-04-25T17:38:31.147384",
-            "time_left": "01:01:27",
-            "spawn_time": "2026-04-25T18:39:58.147372",
             "status": "N"
           },
           {
-            "detected_at": "2026-04-25T23:11:56.264042",
+            "detected_at": "2026-05-02T14:23:39.219928",
             "time_left": "",
             "spawn_time": null,
             "status": "LV2"
           },
           {
-            "detected_at": "2026-04-25T23:50:11.388435",
-            "time_left": "00:56:28",
-            "spawn_time": "2026-04-26T00:46:39.388428",
+            "detected_at": "2026-05-02T14:54:18.340679",
+            "time_left": "00:42:33",
+            "spawn_time": "2026-05-02T15:36:51.340657",
             "status": "N"
           },
           {
-            "detected_at": "2026-05-01T01:38:17.149316",
+            "detected_at": "2026-05-02T16:10:29.005719",
+            "time_left": "00:48:21",
+            "spawn_time": "2026-05-02T16:58:50.005696",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T17:09:05.976657",
             "time_left": "",
             "spawn_time": null,
             "status": "LV1"
           },
           {
-            "detected_at": "2026-05-01T02:02:50.927766",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
+            "detected_at": "2026-05-02T17:35:42.455887",
+            "time_left": "00:57:47",
+            "spawn_time": "2026-05-02T18:33:29.455868",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T17:53:58.920670",
+            "time_left": "00:39:30",
+            "spawn_time": "2026-05-02T18:33:28.920664",
+            "status": "N"
           }
         ]
       }
@@ -477,73 +489,73 @@
     "name": "Indignant Zaura",
     "channel": "CH. 1",
     "type": "Demon",
-    "status": "N",
+    "status": "LV3",
     "first_seen": "2026-04-21T10:22:28.353057",
-    "last_updated": "2026-05-01T17:48:04.619124",
-    "spawn_count": 12,
+    "last_updated": "2026-05-02T17:53:25.578979",
+    "spawn_count": 28,
     "locations": {
       "Seir Rainforest": {
         "map": "Seir Rainforest",
         "spawn_history": [
           {
-            "detected_at": "2026-04-25T17:09:20.171904",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-04-25T23:11:21.867413",
-            "time_left": "02:10:02",
-            "spawn_time": "2026-04-26T01:21:23.867399",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-05-01T01:00:19.335110",
+            "detected_at": "2026-05-02T16:09:55.355283",
             "time_left": "",
             "spawn_time": null,
             "status": "LV2"
           },
           {
-            "detected_at": "2026-05-01T01:21:40.432830",
+            "detected_at": "2026-05-02T16:19:08.269752",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T16:34:34.618669",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T16:43:13.458240",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T16:50:18.729468",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T17:07:56.878166",
             "time_left": "",
             "spawn_time": null,
             "status": "LV3"
           },
           {
-            "detected_at": "2026-05-01T01:26:39.598362",
+            "detected_at": "2026-05-02T17:20:03.703520",
             "time_left": "",
             "spawn_time": null,
             "status": "LV3"
           },
           {
-            "detected_at": "2026-05-01T01:37:47.721720",
+            "detected_at": "2026-05-02T17:31:27.039318",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T17:39:14.373205",
             "time_left": "",
             "spawn_time": null,
             "status": "LV3"
           },
           {
-            "detected_at": "2026-05-01T01:46:33.585075",
+            "detected_at": "2026-05-02T17:53:25.578985",
             "time_left": "",
             "spawn_time": null,
-            "status": "LV4"
-          },
-          {
-            "detected_at": "2026-05-01T01:56:43.857911",
-            "time_left": "01:41:18",
-            "spawn_time": "2026-05-01T03:38:01.857899",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-05-01T17:47:25.329269",
-            "time_left": "01:36:47",
-            "spawn_time": "2026-05-01T19:24:12.329259",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-05-01T17:48:04.619131",
-            "time_left": "01:36:06",
-            "spawn_time": "2026-05-01T19:24:10.619120",
-            "status": "N"
+            "status": "LV3"
           }
         ]
       }
@@ -556,70 +568,70 @@
     "type": "Insect",
     "status": "N",
     "first_seen": "2026-04-21T10:22:36.835511",
-    "last_updated": "2026-05-01T01:02:54.241902",
-    "spawn_count": 14,
+    "last_updated": "2026-05-02T17:19:50.180432",
+    "spawn_count": 29,
     "locations": {
       "Bellai Rainforest": {
         "map": "Bellai Rainforest",
         "spawn_history": [
           {
-            "detected_at": "2026-04-25T16:41:22.987752",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-04-25T17:04:20.865541",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV3"
-          },
-          {
-            "detected_at": "2026-04-25T17:19:05.327459",
-            "time_left": "01:11:56",
-            "spawn_time": "2026-04-25T18:31:01.327453",
+            "detected_at": "2026-05-02T14:25:48.150154",
+            "time_left": "00:56:48",
+            "spawn_time": "2026-05-02T15:22:36.150148",
             "status": "N"
           },
           {
-            "detected_at": "2026-04-25T23:11:39.301655",
+            "detected_at": "2026-05-02T14:54:08.123614",
+            "time_left": "00:28:27",
+            "spawn_time": "2026-05-02T15:22:35.123603",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T15:35:32.480358",
             "time_left": "",
             "spawn_time": null,
             "status": "LV1"
           },
           {
-            "detected_at": "2026-04-25T23:48:45.683962",
+            "detected_at": "2026-05-02T16:10:16.772008",
             "time_left": "",
             "spawn_time": null,
             "status": "LV1"
           },
           {
-            "detected_at": "2026-04-26T00:02:23.203855",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-04-26T00:35:16.302850",
+            "detected_at": "2026-05-02T16:35:27.489797",
             "time_left": "",
             "spawn_time": null,
             "status": "LV2"
           },
           {
-            "detected_at": "2026-04-26T00:45:52.146043",
-            "time_left": "00:55:33",
-            "spawn_time": "2026-04-26T01:41:25.146030",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-05-01T01:00:58.770831",
+            "detected_at": "2026-05-02T16:43:36.611593",
             "time_left": "",
             "spawn_time": null,
-            "status": "LV4"
+            "status": "LV2"
           },
           {
-            "detected_at": "2026-05-01T01:02:54.241909",
-            "time_left": "01:07:58",
-            "spawn_time": "2026-05-01T02:10:52.241897",
+            "detected_at": "2026-05-02T16:50:29.153265",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T17:08:27.609960",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T17:15:48.409107",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T17:19:50.180436",
+            "time_left": "00:54:50",
+            "spawn_time": "2026-05-02T18:14:40.180429",
             "status": "N"
           }
         ]
@@ -631,73 +643,73 @@
     "name": "Indignant Marnox",
     "channel": "CH. 1",
     "type": "Beast",
-    "status": "LV1",
+    "status": "N",
     "first_seen": "2026-04-21T10:22:55.624461",
-    "last_updated": "2026-05-01T14:33:19.071223",
-    "spawn_count": 14,
+    "last_updated": "2026-05-02T14:53:19.295274",
+    "spawn_count": 23,
     "locations": {
       "Fortress Battlegrounds": {
         "map": "Fortress Battlegrounds",
         "spawn_history": [
           {
-            "detected_at": "2026-04-25T16:39:06.451664",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-25T23:10:45.778305",
+            "detected_at": "2026-05-01T14:33:19.071230",
             "time_left": "",
             "spawn_time": null,
             "status": "LV1"
           },
           {
-            "detected_at": "2026-04-25T23:28:53.789365",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
+            "detected_at": "2026-05-01T23:34:38.331073",
+            "time_left": "02:25:36",
+            "spawn_time": "2026-05-02T02:00:14.331061",
+            "status": "N"
           },
           {
-            "detected_at": "2026-04-25T23:48:29.887526",
+            "detected_at": "2026-05-01T23:36:14.107612",
+            "time_left": "02:24:05",
+            "spawn_time": "2026-05-02T02:00:19.107583",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-01T23:40:44.355182",
+            "time_left": "02:19:39",
+            "spawn_time": "2026-05-02T02:00:23.355167",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T10:35:07.669844",
+            "time_left": "01:14:39",
+            "spawn_time": "2026-05-02T11:49:46.669828",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T12:37:58.027154",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T13:33:13.117153",
             "time_left": "",
             "spawn_time": null,
             "status": "LV3"
           },
           {
-            "detected_at": "2026-04-26T00:02:00.391196",
-            "time_left": "04:23:40",
-            "spawn_time": "2026-04-26T04:25:40.391187",
+            "detected_at": "2026-05-02T13:48:21.056822",
+            "time_left": "04:29:02",
+            "spawn_time": "2026-05-02T18:17:23.056811",
             "status": "N"
           },
           {
-            "detected_at": "2026-05-01T01:03:29.257726",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
+            "detected_at": "2026-05-02T14:26:31.160865",
+            "time_left": "03:50:52",
+            "spawn_time": "2026-05-02T18:17:23.160859",
+            "status": "N"
           },
           {
-            "detected_at": "2026-05-01T02:01:49.027272",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
-          {
-            "detected_at": "2026-05-01T02:11:22.533389",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
-          {
-            "detected_at": "2026-05-01T02:23:25.249308",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
-          {
-            "detected_at": "2026-05-01T14:33:19.071230",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
+            "detected_at": "2026-05-02T14:53:19.295278",
+            "time_left": "03:24:03",
+            "spawn_time": "2026-05-02T18:17:22.295271",
+            "status": "N"
           }
         ]
       }
@@ -710,70 +722,70 @@
     "type": "Insect",
     "status": "N",
     "first_seen": "2026-04-21T10:23:08.227847",
-    "last_updated": "2026-05-01T21:34:24.429699",
-    "spawn_count": 13,
+    "last_updated": "2026-05-02T16:09:13.268497",
+    "spawn_count": 25,
     "locations": {
       "Storage Quarter": {
         "map": "Storage Quarter",
         "spawn_history": [
           {
-            "detected_at": "2026-04-25T15:54:48.343620",
-            "time_left": "01:51:52",
-            "spawn_time": "2026-04-25T17:46:40.343614",
+            "detected_at": "2026-05-02T11:40:15.693448",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV4"
+          },
+          {
+            "detected_at": "2026-05-02T11:46:51.844310",
+            "time_left": "01:42:14",
+            "spawn_time": "2026-05-02T13:29:05.844284",
             "status": "N"
           },
           {
-            "detected_at": "2026-04-25T15:59:51.742012",
-            "time_left": "01:46:48",
-            "spawn_time": "2026-04-25T17:46:39.741995",
+            "detected_at": "2026-05-02T12:38:14.571919",
+            "time_left": "00:50:53",
+            "spawn_time": "2026-05-02T13:29:07.571844",
             "status": "N"
           },
           {
-            "detected_at": "2026-04-25T23:10:54.311310",
-            "time_left": "01:25:27",
-            "spawn_time": "2026-04-26T00:36:21.311302",
-            "status": "N"
+            "detected_at": "2026-05-02T13:33:45.934985",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
           },
           {
-            "detected_at": "2026-04-26T00:35:03.609062",
-            "time_left": "00:01:19",
-            "spawn_time": "2026-04-26T00:36:22.609049",
-            "status": "N"
+            "detected_at": "2026-05-02T14:26:40.558885",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
           },
           {
-            "detected_at": "2026-05-01T01:03:44.436363",
+            "detected_at": "2026-05-02T14:53:25.490564",
             "time_left": "",
             "spawn_time": null,
             "status": "LV2"
           },
           {
-            "detected_at": "2026-05-01T01:21:10.951082",
+            "detected_at": "2026-05-02T15:08:17.820539",
             "time_left": "",
             "spawn_time": null,
             "status": "LV2"
           },
           {
-            "detected_at": "2026-05-01T02:02:05.036798",
+            "detected_at": "2026-05-02T15:26:31.988451",
             "time_left": "",
             "spawn_time": null,
             "status": "LV3"
           },
           {
-            "detected_at": "2026-05-01T02:07:11.033485",
+            "detected_at": "2026-05-02T15:32:07.971507",
             "time_left": "",
             "spawn_time": null,
             "status": "LV3"
           },
           {
-            "detected_at": "2026-05-01T02:18:22.658846",
-            "time_left": "01:41:42",
-            "spawn_time": "2026-05-01T04:00:04.658837",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-05-01T21:34:24.429705",
-            "time_left": "01:55:13",
-            "spawn_time": "2026-05-01T23:29:37.429693",
+            "detected_at": "2026-05-02T16:09:13.268501",
+            "time_left": "01:39:43",
+            "spawn_time": "2026-05-02T17:48:56.268494",
             "status": "N"
           }
         ]
@@ -785,73 +797,73 @@
     "name": "Strong Minotaurs",
     "channel": "CH. 1",
     "type": "Beast",
-    "status": "LV2",
+    "status": "LV1",
     "first_seen": "2026-04-21T10:23:25.606031",
-    "last_updated": "2026-05-01T21:15:48.792010",
-    "spawn_count": 16,
+    "last_updated": "2026-05-02T17:54:35.946885",
+    "spawn_count": 25,
     "locations": {
       "Dingofasil District": {
         "map": "Dingofasil District",
         "spawn_history": [
           {
-            "detected_at": "2026-04-25T23:11:03.250901",
-            "time_left": "00:41:49",
-            "spawn_time": "2026-04-25T23:52:52.250893",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-26T00:02:57.079308",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-04-26T00:31:41.465268",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-04-26T00:53:26.637579",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV3"
-          },
-          {
-            "detected_at": "2026-04-26T01:02:58.888240",
-            "time_left": "01:41:55",
-            "spawn_time": "2026-04-26T02:44:53.888230",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-05-01T01:03:51.186732",
-            "time_left": "01:44:24",
-            "spawn_time": "2026-05-01T02:48:15.186717",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-05-01T19:56:02.537286",
-            "time_left": "00:44:48",
-            "spawn_time": "2026-05-01T20:40:50.537276",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-05-01T20:07:18.210318",
-            "time_left": "00:33:32",
-            "spawn_time": "2026-05-01T20:40:50.210300",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-05-01T21:15:13.253780",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
-          {
             "detected_at": "2026-05-01T21:15:48.792016",
             "time_left": "",
             "spawn_time": null,
             "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T10:35:42.857990",
+            "time_left": "00:52:29",
+            "spawn_time": "2026-05-02T11:28:11.857977",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T11:39:40.272469",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T12:37:21.153859",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T13:34:00.547188",
+            "time_left": "01:19:30",
+            "spawn_time": "2026-05-02T14:53:30.547177",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:26:49.575355",
+            "time_left": "00:26:41",
+            "spawn_time": "2026-05-02T14:53:30.575338",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:53:35.344822",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T15:09:04.428205",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T16:11:19.403483",
+            "time_left": "01:36:35",
+            "spawn_time": "2026-05-02T17:47:54.403450",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T17:54:35.946893",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
           }
         ]
       }
@@ -862,73 +874,73 @@
     "name": "Strong Stone Whale",
     "channel": "CH. 1",
     "type": "Aberration",
-    "status": "N",
+    "status": "LV1",
     "first_seen": "2026-04-21T10:23:33.882292",
-    "last_updated": "2026-05-01T18:34:08.302468",
-    "spawn_count": 14,
+    "last_updated": "2026-05-02T17:36:28.213569",
+    "spawn_count": 23,
     "locations": {
       "Coastal Fortress": {
         "map": "Coastal Fortress",
         "spawn_history": [
           {
-            "detected_at": "2026-04-25T17:02:34.836648",
-            "time_left": "02:18:26",
-            "spawn_time": "2026-04-25T19:21:00.836637",
+            "detected_at": "2026-05-01T18:34:08.302474",
+            "time_left": "01:32:15",
+            "spawn_time": "2026-05-01T20:06:23.302463",
             "status": "N"
           },
           {
-            "detected_at": "2026-04-25T23:11:13.327658",
-            "time_left": "00:50:38",
-            "spawn_time": "2026-04-26T00:01:51.327644",
+            "detected_at": "2026-05-02T10:35:50.151624",
+            "time_left": "00:49:16",
+            "spawn_time": "2026-05-02T11:25:06.151617",
             "status": "N"
           },
           {
-            "detected_at": "2026-04-26T00:03:11.849958",
+            "detected_at": "2026-05-02T11:39:47.394070",
             "time_left": "",
             "spawn_time": null,
             "status": "LV1"
           },
           {
-            "detected_at": "2026-04-26T00:31:50.080110",
+            "detected_at": "2026-05-02T12:37:34.692957",
             "time_left": "",
             "spawn_time": null,
-            "status": "LV4"
+            "status": "LV3"
           },
           {
-            "detected_at": "2026-04-26T00:34:40.521209",
-            "time_left": "01:57:17",
-            "spawn_time": "2026-04-26T02:31:57.521204",
+            "detected_at": "2026-05-02T13:19:16.742025",
+            "time_left": "01:08:42",
+            "spawn_time": "2026-05-02T14:27:58.742006",
             "status": "N"
           },
           {
-            "detected_at": "2026-05-01T01:04:05.825935",
+            "detected_at": "2026-05-02T14:26:58.070124",
+            "time_left": "00:01:00",
+            "spawn_time": "2026-05-02T14:27:58.070117",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:53:43.729616",
             "time_left": "",
             "spawn_time": null,
             "status": "LV2"
           },
           {
-            "detected_at": "2026-05-01T01:21:52.792479",
-            "time_left": "01:35:35",
-            "spawn_time": "2026-05-01T02:57:27.792470",
+            "detected_at": "2026-05-02T15:08:44.133259",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T15:27:01.769162",
+            "time_left": "01:53:17",
+            "spawn_time": "2026-05-02T17:20:18.769155",
             "status": "N"
           },
           {
-            "detected_at": "2026-05-01T18:18:06.856609",
-            "time_left": "01:48:17",
-            "spawn_time": "2026-05-01T20:06:23.856601",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-05-01T18:21:33.906450",
-            "time_left": "01:44:49",
-            "spawn_time": "2026-05-01T20:06:22.906441",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-05-01T18:34:08.302474",
-            "time_left": "01:32:15",
-            "spawn_time": "2026-05-01T20:06:23.302463",
-            "status": "N"
+            "detected_at": "2026-05-02T17:36:28.213587",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
           }
         ]
       }
@@ -941,18 +953,12 @@
     "type": "Demon",
     "status": "N",
     "first_seen": "2026-04-21T10:23:43.399403",
-    "last_updated": "2026-05-01T02:11:49.633798",
-    "spawn_count": 5,
+    "last_updated": "2026-05-02T17:38:33.477553",
+    "spawn_count": 11,
     "locations": {
       "Investigation Room": {
         "map": "Investigation Room",
         "spawn_history": [
-          {
-            "detected_at": "2026-04-21T10:23:43.399499",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
           {
             "detected_at": "2026-04-25T15:14:51.598029",
             "time_left": "02:33:17",
@@ -976,6 +982,42 @@
             "time_left": "02:16:37",
             "spawn_time": "2026-05-01T04:28:26.633793",
             "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T10:36:00.270049",
+            "time_left": "03:01:31",
+            "spawn_time": "2026-05-02T13:37:31.270038",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:27:23.686264",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T14:35:32.643544",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV4"
+          },
+          {
+            "detected_at": "2026-05-02T14:43:13.641769",
+            "time_left": "04:38:55",
+            "spawn_time": "2026-05-02T19:22:08.641757",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:52:40.550444",
+            "time_left": "04:29:28",
+            "spawn_time": "2026-05-02T19:22:08.550432",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T17:38:33.477561",
+            "time_left": "01:43:35",
+            "spawn_time": "2026-05-02T19:22:08.477547",
+            "status": "N"
           }
         ]
       }
@@ -988,70 +1030,70 @@
     "type": "Insect",
     "status": "N",
     "first_seen": "2026-04-21T10:23:50.330595",
-    "last_updated": "2026-05-01T01:59:33.749694",
-    "spawn_count": 10,
+    "last_updated": "2026-05-02T16:09:25.332684",
+    "spawn_count": 19,
     "locations": {
       "Kalejimas Lounge": {
         "map": "Kalejimas Lounge",
         "spawn_history": [
           {
-            "detected_at": "2026-04-21T10:23:50.330717",
-            "time_left": "01:42:20",
-            "spawn_time": "2026-04-21T12:06:10.330590",
+            "detected_at": "2026-05-01T01:59:33.749711",
+            "time_left": "01:46:03",
+            "spawn_time": "2026-05-01T03:45:36.749681",
             "status": "N"
           },
           {
-            "detected_at": "2026-04-25T15:15:02.815134",
-            "time_left": "00:08:15",
-            "spawn_time": "2026-04-25T15:23:17.815129",
+            "detected_at": "2026-05-02T10:36:07.483995",
+            "time_left": "01:20:16",
+            "spawn_time": "2026-05-02T11:56:23.483984",
             "status": "N"
           },
           {
-            "detected_at": "2026-04-25T15:37:11.027800",
+            "detected_at": "2026-05-02T12:38:27.596015",
             "time_left": "",
             "spawn_time": null,
-            "status": "LV1"
+            "status": "LV3"
           },
           {
-            "detected_at": "2026-04-25T16:09:25.896343",
-            "time_left": "01:58:09",
-            "spawn_time": "2026-04-25T18:07:34.896338",
+            "detected_at": "2026-05-02T12:49:48.281973",
+            "time_left": "02:18:26",
+            "spawn_time": "2026-05-02T15:08:14.281960",
             "status": "N"
           },
           {
-            "detected_at": "2026-04-25T23:10:16.351957",
-            "time_left": "00:12:03",
-            "spawn_time": "2026-04-25T23:22:19.351946",
+            "detected_at": "2026-05-02T14:27:32.004215",
+            "time_left": "00:40:42",
+            "spawn_time": "2026-05-02T15:08:14.004208",
             "status": "N"
           },
           {
-            "detected_at": "2026-04-25T23:48:03.000739",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-04-26T00:28:38.154250",
-            "time_left": "01:54:20",
-            "spawn_time": "2026-04-26T02:22:58.154242",
+            "detected_at": "2026-05-02T14:52:49.873562",
+            "time_left": "00:15:25",
+            "spawn_time": "2026-05-02T15:08:14.873556",
             "status": "N"
           },
           {
-            "detected_at": "2026-05-01T01:05:02.366759",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-05-01T01:20:46.554363",
+            "detected_at": "2026-05-02T15:27:49.297489",
             "time_left": "",
             "spawn_time": null,
             "status": "LV2"
           },
           {
-            "detected_at": "2026-05-01T01:59:33.749711",
-            "time_left": "01:46:03",
-            "spawn_time": "2026-05-01T03:45:36.749681",
+            "detected_at": "2026-05-02T15:36:24.975821",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T15:36:41.648816",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T16:09:25.332689",
+            "time_left": "01:41:44",
+            "spawn_time": "2026-05-02T17:51:09.332681",
             "status": "N"
           }
         ]
@@ -1065,60 +1107,12 @@
     "type": "Aberration",
     "status": "N",
     "first_seen": "2026-04-21T10:24:00.136535",
-    "last_updated": "2026-05-01T01:57:01.853794",
-    "spawn_count": 18,
+    "last_updated": "2026-05-02T16:18:55.229705",
+    "spawn_count": 26,
     "locations": {
       "Barha Forest": {
         "map": "Barha Forest",
         "spawn_history": [
-          {
-            "detected_at": "2026-04-25T16:17:03.988034",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-04-25T16:23:08.730778",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
-          {
-            "detected_at": "2026-04-25T16:29:56.814898",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV3"
-          },
-          {
-            "detected_at": "2026-04-25T16:38:21.716862",
-            "time_left": "02:11:39",
-            "spawn_time": "2026-04-25T18:50:00.716848",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-25T23:10:25.917955",
-            "time_left": "00:45:31",
-            "spawn_time": "2026-04-25T23:55:56.917947",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-05-01T01:05:45.796518",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-05-01T01:06:00.219963",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-05-01T01:21:20.273424",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
           {
             "detected_at": "2026-05-01T01:26:53.156142",
             "time_left": "",
@@ -1129,6 +1123,54 @@
             "detected_at": "2026-05-01T01:57:01.853806",
             "time_left": "01:35:45",
             "spawn_time": "2026-05-01T03:32:46.853787",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T10:40:06.588752",
+            "time_left": "01:42:10",
+            "spawn_time": "2026-05-02T12:22:16.588740",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T12:38:48.465797",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T14:27:40.622073",
+            "time_left": "00:41:26",
+            "spawn_time": "2026-05-02T15:09:06.622057",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:52:58.179732",
+            "time_left": "00:16:09",
+            "spawn_time": "2026-05-02T15:09:07.179694",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T15:19:35.678795",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T15:35:20.450778",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T16:09:38.323408",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T16:18:55.229714",
+            "time_left": "02:07:38",
+            "spawn_time": "2026-05-02T18:26:33.229699",
             "status": "N"
           }
         ]
@@ -1142,70 +1184,70 @@
     "type": "Plant",
     "status": "N",
     "first_seen": "2026-04-21T10:24:05.780405",
-    "last_updated": "2026-05-01T01:05:18.458699",
-    "spawn_count": 15,
+    "last_updated": "2026-05-02T17:53:07.794251",
+    "spawn_count": 34,
     "locations": {
       "Alemeth Forest": {
         "map": "Alemeth Forest",
         "spawn_history": [
           {
-            "detected_at": "2026-04-25T14:18:15.691734",
-            "time_left": "00:33:39",
-            "spawn_time": "2026-04-25T14:51:54.691725",
+            "detected_at": "2026-05-02T11:39:59.668117",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T12:37:40.577305",
+            "time_left": "01:38:36",
+            "spawn_time": "2026-05-02T14:16:16.577294",
             "status": "N"
           },
           {
-            "detected_at": "2026-04-25T14:19:25.584822",
-            "time_left": "00:32:29",
-            "spawn_time": "2026-04-25T14:51:54.584809",
-            "status": "N"
+            "detected_at": "2026-05-02T14:27:50.004147",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
           },
           {
-            "detected_at": "2026-04-25T14:19:51.488437",
-            "time_left": "00:32:03",
-            "spawn_time": "2026-04-25T14:51:54.488429",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-25T14:24:55.706147",
-            "time_left": "00:27:00",
-            "spawn_time": "2026-04-25T14:51:55.706142",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-25T15:15:51.923375",
-            "time_left": "01:48:17",
-            "spawn_time": "2026-04-25T17:04:08.923369",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-25T17:22:04.471387",
+            "detected_at": "2026-05-02T14:53:05.244776",
             "time_left": "",
             "spawn_time": null,
             "status": "LV2"
           },
           {
-            "detected_at": "2026-04-25T17:31:57.491891",
+            "detected_at": "2026-05-02T15:08:26.953994",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T15:19:12.634128",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV4"
+          },
+          {
+            "detected_at": "2026-05-02T15:26:21.196307",
+            "time_left": "01:59:33",
+            "spawn_time": "2026-05-02T17:25:54.196293",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T17:36:19.128551",
             "time_left": "",
             "spawn_time": null,
             "status": "LV2"
           },
           {
-            "detected_at": "2026-04-25T17:41:40.067502",
-            "time_left": "01:57:25",
-            "spawn_time": "2026-04-25T19:39:05.067497",
-            "status": "N"
+            "detected_at": "2026-05-02T17:39:55.680434",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
           },
           {
-            "detected_at": "2026-04-25T23:10:33.829657",
-            "time_left": "01:50:38",
-            "spawn_time": "2026-04-26T01:01:11.829652",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-05-01T01:05:18.458715",
-            "time_left": "01:24:19",
-            "spawn_time": "2026-05-01T02:29:37.458689",
+            "detected_at": "2026-05-02T17:53:07.794257",
+            "time_left": "01:52:07",
+            "spawn_time": "2026-05-02T19:45:14.794247",
             "status": "N"
           }
         ]
@@ -1217,61 +1259,73 @@
     "name": "Indignant Naktis",
     "channel": "CH. 1",
     "type": "Demon",
-    "status": "LV2",
+    "status": "LV1",
     "first_seen": "2026-04-21T10:24:42.233495",
-    "last_updated": "2026-05-01T02:31:11.546282",
-    "spawn_count": 8,
+    "last_updated": "2026-05-02T17:54:27.498944",
+    "spawn_count": 17,
     "locations": {
       "Sanctuary": {
         "map": "Sanctuary",
         "spawn_history": [
           {
-            "detected_at": "2026-04-21T10:24:42.233586",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-04-21T10:50:35.658478",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
-          {
-            "detected_at": "2026-04-25T15:17:42.944198",
-            "time_left": "03:36:06",
-            "spawn_time": "2026-04-25T18:53:48.944183",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-25T23:12:16.438005",
-            "time_left": "01:47:03",
-            "spawn_time": "2026-04-26T00:59:19.437995",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-05-01T00:59:53.983919",
-            "time_left": "00:19:03",
-            "spawn_time": "2026-05-01T01:18:56.983858",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-05-01T01:26:13.400081",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-05-01T02:03:08.231206",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
             "detected_at": "2026-05-01T02:31:11.546286",
             "time_left": "",
             "spawn_time": null,
             "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T10:33:16.192962",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T11:25:08.947940",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T11:48:38.289289",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T11:55:13.771784",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T12:13:59.755919",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T12:35:04.844534",
+            "time_left": "04:39:58",
+            "spawn_time": "2026-05-02T17:15:02.844526",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:54:43.651631",
+            "time_left": "02:20:21",
+            "spawn_time": "2026-05-02T17:15:04.651621",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T17:32:13.624060",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T17:54:27.498949",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
           }
         ]
       }
@@ -1284,52 +1338,70 @@
     "type": "Aberration",
     "status": "N",
     "first_seen": "2026-04-21T10:24:55.023735",
-    "last_updated": "2026-05-01T02:07:54.911855",
-    "spawn_count": 7,
+    "last_updated": "2026-05-02T17:22:33.659766",
+    "spawn_count": 22,
     "locations": {
       "Grand Corridor": {
         "map": "Grand Corridor",
         "spawn_history": [
           {
-            "detected_at": "2026-04-21T10:24:55.024195",
-            "time_left": "01:32:08",
-            "spawn_time": "2026-04-21T11:57:03.023699",
+            "detected_at": "2026-05-02T12:35:28.718364",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T12:35:33.741117",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T13:23:10.865083",
+            "time_left": "01:18:49",
+            "spawn_time": "2026-05-02T14:41:59.865072",
             "status": "N"
           },
           {
-            "detected_at": "2026-04-25T15:17:51.752790",
+            "detected_at": "2026-05-02T14:54:50.232853",
             "time_left": "",
             "spawn_time": null,
             "status": "LV1"
           },
           {
-            "detected_at": "2026-04-25T15:59:34.380266",
-            "time_left": "01:48:27",
-            "spawn_time": "2026-04-25T17:48:01.380254",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-25T23:12:25.787819",
-            "time_left": "00:45:34",
-            "spawn_time": "2026-04-25T23:57:59.787813",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-26T00:04:49.788131",
+            "detected_at": "2026-05-02T15:28:18.526497",
             "time_left": "",
             "spawn_time": null,
             "status": "LV1"
           },
           {
-            "detected_at": "2026-04-26T00:26:10.049676",
-            "time_left": "02:17:57",
-            "spawn_time": "2026-04-26T02:44:07.049658",
-            "status": "N"
+            "detected_at": "2026-05-02T16:10:58.401910",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
           },
           {
-            "detected_at": "2026-05-01T02:07:54.911858",
-            "time_left": "02:05:50",
-            "spawn_time": "2026-05-01T04:13:44.911853",
+            "detected_at": "2026-05-02T16:34:45.352736",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T16:43:24.709644",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T17:08:30.570617",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T17:22:33.659770",
+            "time_left": "02:05:29",
+            "spawn_time": "2026-05-02T19:28:02.659763",
             "status": "N"
           }
         ]
@@ -1341,67 +1413,73 @@
     "name": "Strong Fireload",
     "channel": "CH. 1",
     "type": "Beast",
-    "status": "N",
+    "status": "LV1",
     "first_seen": "2026-04-21T10:25:04.775110",
-    "last_updated": "2026-05-01T01:07:19.367455",
-    "spawn_count": 9,
+    "last_updated": "2026-05-02T17:38:18.740974",
+    "spawn_count": 19,
     "locations": {
       "Main Building": {
         "map": "Main Building",
         "spawn_history": [
           {
-            "detected_at": "2026-04-21T10:25:04.776062",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-04-21T10:50:45.636618",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
-          {
-            "detected_at": "2026-04-25T15:18:00.419380",
-            "time_left": "02:14:22",
-            "spawn_time": "2026-04-25T17:32:22.419373",
+            "detected_at": "2026-05-02T10:33:49.717646",
+            "time_left": "00:34:16",
+            "spawn_time": "2026-05-02T11:08:05.717635",
             "status": "N"
           },
           {
-            "detected_at": "2026-04-25T17:49:21.743338",
+            "detected_at": "2026-05-02T11:26:05.846240",
             "time_left": "",
             "spawn_time": null,
             "status": "LV1"
           },
           {
-            "detected_at": "2026-04-25T23:12:33.034936",
-            "time_left": "00:33:16",
-            "spawn_time": "2026-04-25T23:45:49.034883",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-25T23:52:55.339704",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-04-26T00:26:40.308831",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-05-01T01:00:04.355508",
+            "detected_at": "2026-05-02T11:50:03.917562",
             "time_left": "",
             "spawn_time": null,
             "status": "LV3"
           },
           {
-            "detected_at": "2026-05-01T01:07:19.367458",
-            "time_left": "01:54:58",
-            "spawn_time": "2026-05-01T03:02:17.367453",
+            "detected_at": "2026-05-02T11:50:15.445075",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T11:54:03.447557",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T12:13:40.402312",
+            "time_left": "01:58:23",
+            "spawn_time": "2026-05-02T14:12:03.402300",
             "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:55:05.416689",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T15:07:54.766392",
+            "time_left": "01:58:32",
+            "spawn_time": "2026-05-02T17:06:26.766385",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T17:32:03.003206",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T17:38:18.740981",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
           }
         ]
       }
@@ -1414,36 +1492,12 @@
     "type": "Beast",
     "status": "N",
     "first_seen": "2026-04-21T10:25:20.285431",
-    "last_updated": "2026-05-01T01:00:11.030091",
-    "spawn_count": 7,
+    "last_updated": "2026-05-02T16:40:35.996372",
+    "spawn_count": 14,
     "locations": {
       "Penitence Route": {
         "map": "Penitence Route",
         "spawn_history": [
-          {
-            "detected_at": "2026-04-21T10:25:20.285521",
-            "time_left": "00:56:46",
-            "spawn_time": "2026-04-21T11:22:06.285429",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-25T15:18:09.211753",
-            "time_left": "01:33:11",
-            "spawn_time": "2026-04-25T16:51:20.211738",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-25T17:04:41.532348",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
-          {
-            "detected_at": "2026-04-25T17:08:52.530763",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV3"
-          },
           {
             "detected_at": "2026-04-25T17:18:25.984383",
             "time_left": "01:57:18",
@@ -1461,6 +1515,48 @@
             "time_left": "02:14:27",
             "spawn_time": "2026-05-01T03:14:38.030088",
             "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T10:33:57.323770",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T11:31:28.767089",
+            "time_left": "01:20:58",
+            "spawn_time": "2026-05-02T12:52:26.767076",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T13:23:45.389471",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T13:32:29.791172",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T14:55:16.789511",
+            "time_left": "01:12:40",
+            "spawn_time": "2026-05-02T16:07:56.789492",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T16:35:07.749481",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T16:40:35.996378",
+            "time_left": "01:54:02",
+            "spawn_time": "2026-05-02T18:34:37.996367",
+            "status": "N"
           }
         ]
       }
@@ -1471,10 +1567,10 @@
     "name": "Indignant Helga Sirle",
     "channel": "CH. 1",
     "type": "",
-    "status": "LV1",
+    "status": "LV2",
     "first_seen": "2026-04-21T10:25:30.586885",
-    "last_updated": "2026-04-25T16:12:18.624829",
-    "spawn_count": 4,
+    "last_updated": "2026-05-02T17:37:02.941690",
+    "spawn_count": 7,
     "locations": {
       "": {
         "map": "",
@@ -1502,6 +1598,24 @@
             "time_left": "",
             "spawn_time": null,
             "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T14:55:25.816453",
+            "time_left": "00:30:00",
+            "spawn_time": "2026-05-02T15:25:25.816446",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T17:13:49.504623",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T17:37:02.941699",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
           }
         ]
       }
@@ -1514,70 +1628,70 @@
     "type": "Aberration",
     "status": "N",
     "first_seen": "2026-04-21T10:25:43.141115",
-    "last_updated": "2026-05-01T01:37:33.054156",
-    "spawn_count": 14,
+    "last_updated": "2026-05-02T17:31:40.386892",
+    "spawn_count": 23,
     "locations": {
       "Mage Tower 2F": {
         "map": "Mage Tower 2F",
         "spawn_history": [
           {
-            "detected_at": "2026-04-25T16:23:32.072278",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
-          {
-            "detected_at": "2026-04-25T17:02:51.286129",
-            "time_left": "01:49:29",
-            "spawn_time": "2026-04-25T18:52:20.286120",
+            "detected_at": "2026-05-01T01:37:33.054161",
+            "time_left": "01:53:27",
+            "spawn_time": "2026-05-01T03:31:00.054152",
             "status": "N"
           },
           {
-            "detected_at": "2026-04-25T23:12:58.597173",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
-          {
-            "detected_at": "2026-04-25T23:26:52.761702",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
-          {
-            "detected_at": "2026-04-25T23:50:29.266091",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
-          {
-            "detected_at": "2026-04-26T00:03:42.578066",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
-          {
-            "detected_at": "2026-04-26T00:36:43.717786",
-            "time_left": "02:21:38",
-            "spawn_time": "2026-04-26T02:58:21.717730",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-05-01T00:59:07.969366",
+            "detected_at": "2026-05-02T10:32:29.590356",
             "time_left": "",
             "spawn_time": null,
             "status": "LV1"
           },
           {
-            "detected_at": "2026-05-01T01:24:58.670947",
+            "detected_at": "2026-05-02T11:31:10.822365",
+            "time_left": "01:33:46",
+            "spawn_time": "2026-05-02T13:04:56.822352",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T13:24:10.116303",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T14:55:32.320292",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T15:28:29.824727",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T16:11:41.948181",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T16:42:03.130762",
             "time_left": "",
             "spawn_time": null,
             "status": "LV2"
           },
           {
-            "detected_at": "2026-05-01T01:37:33.054161",
-            "time_left": "01:53:27",
-            "spawn_time": "2026-05-01T03:31:00.054152",
+            "detected_at": "2026-05-02T17:08:47.679683",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T17:31:40.386896",
+            "time_left": "01:54:54",
+            "spawn_time": "2026-05-02T19:26:34.386891",
             "status": "N"
           }
         ]
@@ -1618,43 +1732,73 @@
     "name": "Strong Salamander",
     "channel": "CH. 1",
     "type": "Beast",
-    "status": "N",
+    "status": "LV1",
     "first_seen": "2026-04-21T10:27:27.351974",
-    "last_updated": "2026-05-01T00:59:18.353139",
-    "spawn_count": 5,
+    "last_updated": "2026-05-02T17:36:45.489151",
+    "spawn_count": 14,
     "locations": {
       "Mage Tower 1F": {
         "map": "Mage Tower 1F",
         "spawn_history": [
           {
-            "detected_at": "2026-04-21T10:27:27.352055",
-            "time_left": "00:42:46",
-            "spawn_time": "2026-04-21T11:10:13.351969",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-25T15:18:35.587489",
-            "time_left": "01:17:19",
-            "spawn_time": "2026-04-25T16:35:54.587478",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-25T17:08:07.645759",
-            "time_left": "02:22:24",
-            "spawn_time": "2026-04-25T19:30:31.645754",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-25T23:13:14.796707",
-            "time_left": "01:40:27",
-            "spawn_time": "2026-04-26T00:53:41.796695",
-            "status": "N"
-          },
-          {
             "detected_at": "2026-05-01T00:59:18.353156",
             "time_left": "01:53:37",
             "spawn_time": "2026-05-01T02:52:55.353129",
             "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T10:32:48.058110",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T11:36:12.149005",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T11:47:53.690165",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T11:53:35.876809",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T12:35:15.882792",
+            "time_left": "01:36:13",
+            "spawn_time": "2026-05-02T14:11:28.882781",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T13:24:16.014098",
+            "time_left": "00:47:12",
+            "spawn_time": "2026-05-02T14:11:28.014087",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:55:41.570619",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T15:28:38.883202",
+            "time_left": "01:53:27",
+            "spawn_time": "2026-05-02T17:22:05.883175",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T17:36:45.489156",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
           }
         ]
       }
@@ -1665,50 +1809,14 @@
     "name": "Cowardly Devilglove",
     "channel": "CH. 1",
     "type": "Aberration",
-    "status": "LV2",
+    "status": "N",
     "first_seen": "2026-04-21T10:27:39.175857",
-    "last_updated": "2026-05-01T02:23:11.861681",
-    "spawn_count": 20,
+    "last_updated": "2026-05-02T16:41:51.703222",
+    "spawn_count": 26,
     "locations": {
       "Fedimian Suburbs": {
         "map": "Fedimian Suburbs",
         "spawn_history": [
-          {
-            "detected_at": "2026-04-25T23:50:46.136758",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-04-26T00:37:21.359339",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
-          {
-            "detected_at": "2026-04-26T00:46:27.164843",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV3"
-          },
-          {
-            "detected_at": "2026-04-26T00:50:15.211170",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV3"
-          },
-          {
-            "detected_at": "2026-04-26T00:53:10.794365",
-            "time_left": "02:08:44",
-            "spawn_time": "2026-04-26T03:01:54.794356",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-05-01T00:59:25.762989",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
           {
             "detected_at": "2026-05-01T01:25:28.814039",
             "time_left": "",
@@ -1732,6 +1840,42 @@
             "time_left": "",
             "spawn_time": null,
             "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T10:32:59.535517",
+            "time_left": "01:17:19",
+            "spawn_time": "2026-05-02T11:50:18.535505",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T12:39:11.174201",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T13:26:09.254843",
+            "time_left": "02:07:45",
+            "spawn_time": "2026-05-02T15:33:54.254831",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:55:48.481159",
+            "time_left": "00:38:05",
+            "spawn_time": "2026-05-02T15:33:53.481149",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T16:12:21.990622",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T16:41:51.703233",
+            "time_left": "01:36:17",
+            "spawn_time": "2026-05-02T18:18:08.703215",
+            "status": "N"
           }
         ]
       }
@@ -1742,56 +1886,14 @@
     "name": "Indignant Helga Sircle",
     "channel": "CH. 1",
     "type": "Demon",
-    "status": "N",
+    "status": "LV2",
     "first_seen": "2026-04-21T10:44:15.987009",
-    "last_updated": "2026-05-01T00:59:04.322776",
-    "spawn_count": 9,
+    "last_updated": "2026-05-02T17:37:16.119264",
+    "spawn_count": 17,
     "locations": {
       "Mage Tower 3F": {
         "map": "Mage Tower 3F",
         "spawn_history": [
-          {
-            "detected_at": "2026-04-21T10:44:15.987326",
-            "time_left": "03:54:01",
-            "spawn_time": "2026-04-21T14:38:16.987003",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-25T16:11:47.416970",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-04-25T16:12:28.068512",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-04-25T16:16:32.756016",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-04-25T16:41:50.386490",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-04-25T17:05:40.008222",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-04-25T17:21:44.325536",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
           {
             "detected_at": "2026-04-25T23:12:50.764292",
             "time_left": "00:55:24",
@@ -1803,6 +1905,54 @@
             "time_left": "03:05:05",
             "spawn_time": "2026-05-01T04:04:09.322771",
             "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T10:32:20.406797",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T11:30:51.339368",
+            "time_left": "03:54:35",
+            "spawn_time": "2026-05-02T15:25:26.339354",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T13:24:00.099095",
+            "time_left": "02:01:25",
+            "spawn_time": "2026-05-02T15:25:25.099075",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T15:28:48.474968",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T16:11:35.208659",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T16:42:28.503016",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T17:15:00.810074",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T17:37:16.119302",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
           }
         ]
       }
@@ -1943,8 +2093,8 @@
     "type": "",
     "status": "N",
     "first_seen": "2026-04-25T14:52:28.988179",
-    "last_updated": "2026-04-26T00:43:29.123878",
-    "spawn_count": 3,
+    "last_updated": "2026-05-02T12:13:13.182393",
+    "spawn_count": 4,
     "locations": {
       "": {
         "map": "",
@@ -1966,6 +2116,12 @@
             "time_left": "01:39:43",
             "spawn_time": "2026-04-26T02:23:12.123876",
             "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T12:13:13.182400",
+            "time_left": "01:48:57",
+            "spawn_time": "2026-05-02T14:02:10.182387",
+            "status": "N"
           }
         ]
       }
@@ -1978,8 +2134,8 @@
     "type": "",
     "status": "N",
     "first_seen": "2026-04-25T14:52:53.486689",
-    "last_updated": "2026-05-01T01:08:35.084466",
-    "spawn_count": 6,
+    "last_updated": "2026-05-02T14:48:15.110453",
+    "spawn_count": 9,
     "locations": {
       "Svalphinghas Forest": {
         "map": "Svalphinghas Forest",
@@ -2019,6 +2175,24 @@
             "time_left": "01:11:42",
             "spawn_time": "2026-05-01T02:20:17.084460",
             "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T11:34:33.805844",
+            "time_left": "00:24:07",
+            "spawn_time": "2026-05-02T11:58:40.805838",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T12:39:49.744123",
+            "time_left": "01:39:13",
+            "spawn_time": "2026-05-02T14:19:02.744110",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:48:15.110458",
+            "time_left": "01:48:55",
+            "spawn_time": "2026-05-02T16:37:10.110448",
+            "status": "N"
           }
         ]
       }
@@ -2031,8 +2205,8 @@
     "type": "Dark",
     "status": "N",
     "first_seen": "2026-04-25T14:54:36.034316",
-    "last_updated": "2026-05-01T01:08:27.506251",
-    "spawn_count": 5,
+    "last_updated": "2026-05-02T17:07:43.521119",
+    "spawn_count": 8,
     "locations": {
       "Nheto Forest": {
         "map": "Nheto Forest",
@@ -2066,6 +2240,24 @@
             "time_left": "00:24:38",
             "spawn_time": "2026-05-01T01:33:05.506247",
             "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:50:56.291727",
+            "time_left": "01:41:31",
+            "spawn_time": "2026-05-02T16:32:27.291713",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T16:42:55.998197",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T17:07:43.521123",
+            "time_left": "02:13:06",
+            "spawn_time": "2026-05-02T19:20:49.521115",
+            "status": "N"
           }
         ]
       }
@@ -2078,8 +2270,8 @@
     "type": "",
     "status": "N",
     "first_seen": "2026-04-25T14:54:59.704756",
-    "last_updated": "2026-05-01T01:58:54.288842",
-    "spawn_count": 7,
+    "last_updated": "2026-05-02T14:51:42.603159",
+    "spawn_count": 10,
     "locations": {
       "Tevhrin Stalactite Cave 2": {
         "map": "Tevhrin Stalactite Cave 2",
@@ -2124,6 +2316,24 @@
             "detected_at": "2026-05-01T01:58:54.288847",
             "time_left": "04:11:25",
             "spawn_time": "2026-05-01T06:10:19.288838",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T11:34:06.206318",
+            "time_left": "01:09:13",
+            "spawn_time": "2026-05-02T12:43:19.206306",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:28:00.952652",
+            "time_left": "03:59:39",
+            "spawn_time": "2026-05-02T18:27:39.952641",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:51:42.603168",
+            "time_left": "03:35:59",
+            "spawn_time": "2026-05-02T18:27:41.603152",
             "status": "N"
           }
         ]
@@ -2194,10 +2404,10 @@
     "name": "Strong Gazing Golem",
     "channel": "CH. 1",
     "type": "",
-    "status": "LV3",
+    "status": "N",
     "first_seen": "2026-04-25T14:55:26.198717",
-    "last_updated": "2026-04-30T20:33:36.489961",
-    "spawn_count": 7,
+    "last_updated": "2026-05-02T16:34:18.659355",
+    "spawn_count": 10,
     "locations": {
       "Tevhrin Stalactite Cave 1": {
         "map": "Tevhrin Stalactite Cave 1",
@@ -2243,6 +2453,24 @@
             "time_left": "",
             "spawn_time": null,
             "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T11:34:15.349392",
+            "time_left": "01:55:30",
+            "spawn_time": "2026-05-02T13:29:45.349382",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:51:50.435467",
+            "time_left": "01:05:35",
+            "spawn_time": "2026-05-02T15:57:25.435415",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T16:34:18.659364",
+            "time_left": "02:12:24",
+            "spawn_time": "2026-05-02T18:46:42.659349",
+            "status": "N"
           }
         ]
       }
@@ -2255,8 +2483,8 @@
     "type": "",
     "status": "N",
     "first_seen": "2026-04-25T14:55:37.315390",
-    "last_updated": "2026-05-01T01:57:52.551141",
-    "spawn_count": 8,
+    "last_updated": "2026-05-02T14:52:15.029170",
+    "spawn_count": 10,
     "locations": {
       "Timerys Temple": {
         "map": "Timerys Temple",
@@ -2308,6 +2536,18 @@
             "time_left": "02:30:20",
             "spawn_time": "2026-05-01T04:28:12.551139",
             "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T11:32:41.704891",
+            "time_left": "02:01:35",
+            "spawn_time": "2026-05-02T13:34:16.704881",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:52:15.029181",
+            "time_left": "03:08:47",
+            "spawn_time": "2026-05-02T18:01:02.029162",
+            "status": "N"
           }
         ]
       }
@@ -2320,36 +2560,12 @@
     "type": "",
     "status": "N",
     "first_seen": "2026-04-25T14:55:44.340193",
-    "last_updated": "2026-05-01T01:58:05.366187",
-    "spawn_count": 8,
+    "last_updated": "2026-05-02T14:52:07.978292",
+    "spawn_count": 14,
     "locations": {
       "Timerys Temple": {
         "map": "Timerys Temple",
         "spawn_history": [
-          {
-            "detected_at": "2026-04-25T14:55:44.340300",
-            "time_left": "00:18:35",
-            "spawn_time": "2026-04-25T15:14:19.340191",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-25T15:24:19.586172",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-04-25T15:38:18.519248",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
-          {
-            "detected_at": "2026-04-25T15:51:43.658619",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV3"
-          },
           {
             "detected_at": "2026-04-25T16:07:59.115079",
             "time_left": "03:29:11",
@@ -2373,6 +2589,42 @@
             "time_left": "03:40:42",
             "spawn_time": "2026-05-01T05:38:47.366185",
             "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T11:32:56.480090",
+            "time_left": "01:07:38",
+            "spawn_time": "2026-05-02T12:40:34.480079",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T12:41:04.865764",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T13:52:41.533339",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T13:55:36.333760",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T13:55:56.220692",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T14:52:07.978299",
+            "time_left": "03:42:15",
+            "spawn_time": "2026-05-02T18:34:22.978287",
+            "status": "N"
           }
         ]
       }
@@ -2385,8 +2637,8 @@
     "type": "",
     "status": "N",
     "first_seen": "2026-04-25T14:55:52.017528",
-    "last_updated": "2026-05-01T02:23:43.010219",
-    "spawn_count": 8,
+    "last_updated": "2026-05-02T14:52:02.910274",
+    "spawn_count": 10,
     "locations": {
       "Timerys Temple": {
         "map": "Timerys Temple",
@@ -2438,6 +2690,18 @@
             "time_left": "02:57:36",
             "spawn_time": "2026-05-01T05:21:19.010210",
             "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T11:32:49.578740",
+            "time_left": "01:16:39",
+            "spawn_time": "2026-05-02T12:49:28.578733",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:52:02.910277",
+            "time_left": "03:40:40",
+            "spawn_time": "2026-05-02T18:32:42.910271",
+            "status": "N"
           }
         ]
       }
@@ -2450,18 +2714,12 @@
     "type": "",
     "status": "N",
     "first_seen": "2026-04-25T14:55:58.833658",
-    "last_updated": "2026-05-01T01:10:16.445965",
-    "spawn_count": 8,
+    "last_updated": "2026-05-02T16:19:52.038940",
+    "spawn_count": 11,
     "locations": {
       "Timerys Temple": {
         "map": "Timerys Temple",
         "spawn_history": [
-          {
-            "detected_at": "2026-04-25T14:55:58.833797",
-            "time_left": "01:15:20",
-            "spawn_time": "2026-04-25T16:11:18.833654",
-            "status": "N"
-          },
           {
             "detected_at": "2026-04-25T16:30:32.013866",
             "time_left": "",
@@ -2503,6 +2761,24 @@
             "time_left": "01:19:53",
             "spawn_time": "2026-05-01T02:30:09.445959",
             "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T11:33:04.238991",
+            "time_left": "03:29:33",
+            "spawn_time": "2026-05-02T15:02:37.238980",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:52:25.009177",
+            "time_left": "00:10:14",
+            "spawn_time": "2026-05-02T15:02:39.009170",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T16:19:52.038951",
+            "time_left": "03:23:56",
+            "spawn_time": "2026-05-02T19:43:48.038932",
+            "status": "N"
           }
         ]
       }
@@ -2513,10 +2789,10 @@
     "name": "Indignant Algis",
     "channel": "CH. 5",
     "type": "",
-    "status": "LV1",
+    "status": "N",
     "first_seen": "2026-04-25T14:56:06.014240",
-    "last_updated": "2026-05-01T01:57:35.296357",
-    "spawn_count": 4,
+    "last_updated": "2026-05-02T16:20:02.365633",
+    "spawn_count": 8,
     "locations": {
       "Timerys Temple": {
         "map": "Timerys Temple",
@@ -2544,6 +2820,30 @@
             "time_left": "",
             "spawn_time": null,
             "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T11:33:11.297049",
+            "time_left": "02:48:19",
+            "spawn_time": "2026-05-02T14:21:30.297033",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T13:52:02.554340",
+            "time_left": "00:29:30",
+            "spawn_time": "2026-05-02T14:21:32.554330",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:52:31.056229",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T16:20:02.365639",
+            "time_left": "02:47:36",
+            "spawn_time": "2026-05-02T19:07:38.365630",
+            "status": "N"
           }
         ]
       }
@@ -2556,8 +2856,8 @@
     "type": "",
     "status": "N",
     "first_seen": "2026-04-25T14:56:22.681202",
-    "last_updated": "2026-05-01T01:10:43.245705",
-    "spawn_count": 4,
+    "last_updated": "2026-05-02T16:45:06.550253",
+    "spawn_count": 7,
     "locations": {
       "Taniel I Memorial Dist.": {
         "map": "Taniel I Memorial Dist.",
@@ -2585,6 +2885,24 @@
             "time_left": "01:51:34",
             "spawn_time": "2026-05-01T03:02:17.245701",
             "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T11:33:27.591932",
+            "time_left": "01:10:32",
+            "spawn_time": "2026-05-02T12:43:59.591924",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T12:40:09.566106",
+            "time_left": "00:03:50",
+            "spawn_time": "2026-05-02T12:43:59.566099",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T16:45:06.550264",
+            "time_left": "01:46:10",
+            "spawn_time": "2026-05-02T18:31:16.550244",
+            "status": "N"
           }
         ]
       }
@@ -2597,8 +2915,8 @@
     "type": "",
     "status": "N",
     "first_seen": "2026-04-25T14:56:30.243234",
-    "last_updated": "2026-05-01T01:19:18.851910",
-    "spawn_count": 7,
+    "last_updated": "2026-05-02T16:45:01.664294",
+    "spawn_count": 10,
     "locations": {
       "Taniel I Memorial Dist.": {
         "map": "Taniel I Memorial Dist.",
@@ -2644,6 +2962,24 @@
             "time_left": "02:10:36",
             "spawn_time": "2026-05-01T03:29:54.851907",
             "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T11:33:20.269978",
+            "time_left": "00:26:24",
+            "spawn_time": "2026-05-02T11:59:44.269963",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T12:40:02.503585",
+            "time_left": "02:21:16",
+            "spawn_time": "2026-05-02T15:01:18.503578",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T16:45:01.664300",
+            "time_left": "00:58:07",
+            "spawn_time": "2026-05-02T17:43:08.664290",
+            "status": "N"
           }
         ]
       }
@@ -2656,36 +2992,12 @@
     "type": "",
     "status": "N",
     "first_seen": "2026-04-25T14:56:46.081668",
-    "last_updated": "2026-05-01T01:46:00.179253",
-    "spawn_count": 10,
+    "last_updated": "2026-05-02T18:13:51.380732",
+    "spawn_count": 14,
     "locations": {
       "Jeromel Square": {
         "map": "Jeromel Square",
         "spawn_history": [
-          {
-            "detected_at": "2026-04-25T14:56:46.081735",
-            "time_left": "01:15:54",
-            "spawn_time": "2026-04-25T16:12:40.081667",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-25T16:19:14.477309",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-04-25T16:30:15.988062",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
-          {
-            "detected_at": "2026-04-25T16:40:00.441798",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV3"
-          },
           {
             "detected_at": "2026-04-25T16:57:47.804241",
             "time_left": "02:19:45",
@@ -2721,6 +3033,30 @@
             "time_left": "01:57:15",
             "spawn_time": "2026-05-01T03:43:15.179251",
             "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T11:33:44.087831",
+            "time_left": "00:53:56",
+            "spawn_time": "2026-05-02T12:27:40.087818",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T12:40:44.908523",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T16:44:52.715639",
+            "time_left": "01:49:11",
+            "spawn_time": "2026-05-02T18:34:03.715622",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T18:13:51.380787",
+            "time_left": "01:47:07",
+            "spawn_time": "2026-05-02T20:00:58.380719",
+            "status": "N"
           }
         ]
       }
@@ -2733,8 +3069,8 @@
     "type": "",
     "status": "N",
     "first_seen": "2026-04-25T14:57:44.569596",
-    "last_updated": "2026-04-26T00:29:40.459219",
-    "spawn_count": 4,
+    "last_updated": "2026-05-02T16:44:42.747452",
+    "spawn_count": 7,
     "locations": {
       "Jeromel Square": {
         "map": "Jeromel Square",
@@ -2762,6 +3098,24 @@
             "time_left": "01:41:33",
             "spawn_time": "2026-04-26T02:11:13.459207",
             "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T11:33:38.201014",
+            "time_left": "00:48:02",
+            "spawn_time": "2026-05-02T12:21:40.201007",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T12:40:37.388464",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T16:44:42.747459",
+            "time_left": "00:47:16",
+            "spawn_time": "2026-05-02T17:31:58.747447",
+            "status": "N"
           }
         ]
       }
@@ -2774,8 +3128,8 @@
     "type": "",
     "status": "N",
     "first_seen": "2026-04-25T15:04:31.966597",
-    "last_updated": "2026-05-01T02:18:03.874646",
-    "spawn_count": 5,
+    "last_updated": "2026-05-02T11:22:45.501309",
+    "spawn_count": 6,
     "locations": {
       "Jonael Memorial Dist.": {
         "map": "Jonael Memorial Dist.",
@@ -2809,6 +3163,12 @@
             "time_left": "01:52:55",
             "spawn_time": "2026-05-01T04:10:58.874638",
             "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T11:22:45.501315",
+            "time_left": "01:32:51",
+            "spawn_time": "2026-05-02T12:55:36.501303",
+            "status": "N"
           }
         ]
       }
@@ -2821,46 +3181,70 @@
     "type": "Demon",
     "status": "N",
     "first_seen": "2026-04-25T15:18:54.091831",
-    "last_updated": "2026-05-01T00:59:39.357239",
-    "spawn_count": 6,
+    "last_updated": "2026-05-02T15:31:51.735433",
+    "spawn_count": 15,
     "locations": {
       "Goddess Ancient Garden": {
         "map": "Goddess Ancient Garden",
         "spawn_history": [
           {
-            "detected_at": "2026-04-25T15:18:54.092030",
-            "time_left": "01:45:53",
-            "spawn_time": "2026-04-25T17:04:47.091824",
+            "detected_at": "2026-05-01T00:59:39.357264",
+            "time_left": "01:06:30",
+            "spawn_time": "2026-05-01T02:06:09.357224",
             "status": "N"
           },
           {
-            "detected_at": "2026-04-25T17:21:33.056183",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
+            "detected_at": "2026-05-02T10:33:06.119048",
+            "time_left": "00:31:17",
+            "spawn_time": "2026-05-02T11:04:23.119028",
+            "status": "N"
           },
           {
-            "detected_at": "2026-04-25T17:47:22.526425",
+            "detected_at": "2026-05-02T11:39:28.844826",
             "time_left": "",
             "spawn_time": null,
             "status": "LV2"
           },
           {
-            "detected_at": "2026-04-25T23:13:37.576727",
-            "time_left": "00:16:54",
-            "spawn_time": "2026-04-25T23:30:31.576702",
+            "detected_at": "2026-05-02T11:48:02.881047",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T11:54:58.324833",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T12:13:29.284544",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T12:25:50.780750",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T12:34:17.996283",
+            "time_left": "02:22:04",
+            "spawn_time": "2026-05-02T14:56:21.996271",
             "status": "N"
           },
           {
-            "detected_at": "2026-04-25T23:52:06.795522",
-            "time_left": "02:00:30",
-            "spawn_time": "2026-04-26T01:52:36.795513",
+            "detected_at": "2026-05-02T14:55:56.765082",
+            "time_left": "00:00:24",
+            "spawn_time": "2026-05-02T14:56:20.765067",
             "status": "N"
           },
           {
-            "detected_at": "2026-05-01T00:59:39.357264",
-            "time_left": "01:06:30",
-            "spawn_time": "2026-05-01T02:06:09.357224",
+            "detected_at": "2026-05-02T15:31:51.735437",
+            "time_left": "02:10:03",
+            "spawn_time": "2026-05-02T17:41:54.735430",
             "status": "N"
           }
         ]
@@ -2874,8 +3258,8 @@
     "type": "Beast",
     "status": "N",
     "first_seen": "2026-04-25T15:19:05.740654",
-    "last_updated": "2026-05-01T00:58:05.724925",
-    "spawn_count": 3,
+    "last_updated": "2026-05-02T14:56:08.070716",
+    "spawn_count": 10,
     "locations": {
       "Demon Prison District 5": {
         "map": "Demon Prison District 5",
@@ -2897,6 +3281,48 @@
             "time_left": "03:44:44",
             "spawn_time": "2026-05-01T04:42:49.724921",
             "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T10:31:23.148888",
+            "time_left": "00:40:03",
+            "spawn_time": "2026-05-02T11:11:26.148871",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T11:35:27.209913",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T11:50:48.701539",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T12:36:20.334024",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T13:26:29.935022",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T13:49:04.052825",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T14:56:08.070722",
+            "time_left": "03:33:34",
+            "spawn_time": "2026-05-02T18:29:42.070712",
+            "status": "N"
           }
         ]
       }
@@ -2909,54 +3335,12 @@
     "type": "Beast",
     "status": "N",
     "first_seen": "2026-04-25T15:19:16.530832",
-    "last_updated": "2026-05-01T00:58:12.114543",
-    "spawn_count": 9,
+    "last_updated": "2026-05-02T16:42:13.299457",
+    "spawn_count": 17,
     "locations": {
       "Demon Prison District 4": {
         "map": "Demon Prison District 4",
         "spawn_history": [
-          {
-            "detected_at": "2026-04-25T15:19:16.530904",
-            "time_left": "00:38:27",
-            "spawn_time": "2026-04-25T15:57:43.530828",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-25T16:13:27.782414",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-04-25T16:44:37.133174",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV3"
-          },
-          {
-            "detected_at": "2026-04-25T17:03:36.116944",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV3"
-          },
-          {
-            "detected_at": "2026-04-25T17:20:00.855436",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV3"
-          },
-          {
-            "detected_at": "2026-04-25T17:30:31.008999",
-            "time_left": "02:09:38",
-            "spawn_time": "2026-04-25T19:40:09.008968",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-25T23:13:55.447687",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
           {
             "detected_at": "2026-04-25T23:52:22.199952",
             "time_left": "02:18:09",
@@ -2968,6 +3352,54 @@
             "time_left": "01:29:14",
             "spawn_time": "2026-05-01T02:27:26.114502",
             "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T10:31:32.443007",
+            "time_left": "00:06:47",
+            "spawn_time": "2026-05-02T10:38:19.442996",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T11:39:10.015280",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T11:51:32.110865",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T12:36:27.278890",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T13:26:38.227371",
+            "time_left": "01:54:53",
+            "spawn_time": "2026-05-02T15:21:31.227361",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:56:16.199747",
+            "time_left": "00:25:15",
+            "spawn_time": "2026-05-02T15:21:31.199741",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T16:12:58.095992",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T16:42:13.299461",
+            "time_left": "02:05:42",
+            "spawn_time": "2026-05-02T18:47:55.299454",
+            "status": "N"
           }
         ]
       }
@@ -2978,73 +3410,73 @@
     "name": "Cowardly Nuaele",
     "channel": "CH. 1",
     "type": "Demon",
-    "status": "LV1",
+    "status": "N",
     "first_seen": "2026-04-25T15:19:21.934065",
-    "last_updated": "2026-05-01T02:03:42.867896",
-    "spawn_count": 17,
+    "last_updated": "2026-05-02T17:22:53.563849",
+    "spawn_count": 27,
     "locations": {
       "Demon Prison District 3": {
         "map": "Demon Prison District 3",
         "spawn_history": [
           {
-            "detected_at": "2026-04-25T17:20:08.504807",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV3"
-          },
-          {
-            "detected_at": "2026-04-25T17:31:41.823662",
-            "time_left": "01:54:01",
-            "spawn_time": "2026-04-25T19:25:42.823652",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-25T23:14:08.788026",
-            "time_left": "00:13:17",
-            "spawn_time": "2026-04-25T23:27:25.788018",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-25T23:52:30.463126",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
-          {
-            "detected_at": "2026-04-26T00:37:02.685714",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV3"
-          },
-          {
-            "detected_at": "2026-04-26T00:42:04.407123",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV3"
-          },
-          {
-            "detected_at": "2026-04-26T00:49:59.835549",
-            "time_left": "02:15:56",
-            "spawn_time": "2026-04-26T03:05:55.835544",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-05-01T00:58:25.816515",
+            "detected_at": "2026-05-02T10:31:39.194889",
             "time_left": "",
             "spawn_time": null,
             "status": "LV1"
           },
           {
-            "detected_at": "2026-05-01T01:24:21.913241",
+            "detected_at": "2026-05-02T11:36:34.111059",
             "time_left": "",
             "spawn_time": null,
             "status": "LV1"
           },
           {
-            "detected_at": "2026-05-01T02:03:42.867904",
+            "detected_at": "2026-05-02T12:36:33.824124",
             "time_left": "",
             "spawn_time": null,
             "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T13:26:45.261160",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T13:30:53.830884",
+            "time_left": "02:05:19",
+            "spawn_time": "2026-05-02T15:36:12.830875",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:56:21.864592",
+            "time_left": "00:39:50",
+            "spawn_time": "2026-05-02T15:36:11.864558",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T16:13:07.357525",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T16:42:19.962158",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T17:15:27.864919",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T17:22:53.563853",
+            "time_left": "02:16:35",
+            "spawn_time": "2026-05-02T19:39:28.563847",
+            "status": "N"
           }
         ]
       }
@@ -3057,24 +3489,12 @@
     "type": "Plant",
     "status": "N",
     "first_seen": "2026-04-25T15:19:32.461318",
-    "last_updated": "2026-04-26T00:36:06.572404",
-    "spawn_count": 6,
+    "last_updated": "2026-05-02T17:37:37.139002",
+    "spawn_count": 12,
     "locations": {
       "Demon Prison District 1": {
         "map": "Demon Prison District 1",
         "spawn_history": [
-          {
-            "detected_at": "2026-04-25T15:19:32.462029",
-            "time_left": "01:57:22",
-            "spawn_time": "2026-04-25T17:16:54.461299",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-25T17:22:46.510714",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
           {
             "detected_at": "2026-04-25T17:47:37.793421",
             "time_left": "",
@@ -3098,6 +3518,42 @@
             "time_left": "01:39:03",
             "spawn_time": "2026-04-26T02:15:09.572401",
             "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T10:31:49.768729",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T11:36:02.477442",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T11:47:23.137445",
+            "time_left": "01:49:55",
+            "spawn_time": "2026-05-02T13:37:18.137433",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:56:31.697867",
+            "time_left": "01:57:33",
+            "spawn_time": "2026-05-02T16:54:04.697858",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T17:14:11.478114",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T17:37:37.139007",
+            "time_left": "01:58:33",
+            "spawn_time": "2026-05-02T19:36:10.138998",
+            "status": "N"
           }
         ]
       }
@@ -3110,48 +3566,12 @@
     "type": "Aberration",
     "status": "N",
     "first_seen": "2026-04-25T15:19:42.680488",
-    "last_updated": "2026-05-01T02:04:56.607810",
-    "spawn_count": 9,
+    "last_updated": "2026-05-02T17:37:54.510540",
+    "spawn_count": 16,
     "locations": {
       "Aqueduct Bridge Area": {
         "map": "Aqueduct Bridge Area",
         "spawn_history": [
-          {
-            "detected_at": "2026-04-25T15:19:42.681082",
-            "time_left": "00:42:52",
-            "spawn_time": "2026-04-25T16:02:34.680473",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-25T16:14:05.746414",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-04-25T16:24:38.383136",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV3"
-          },
-          {
-            "detected_at": "2026-04-25T16:29:32.981870",
-            "time_left": "02:10:11",
-            "spawn_time": "2026-04-25T18:39:43.981865",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-25T23:15:16.845825",
-            "time_left": "00:59:16",
-            "spawn_time": "2026-04-26T00:14:32.845817",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-26T00:36:19.021561",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
           {
             "detected_at": "2026-05-01T00:58:41.475450",
             "time_left": "",
@@ -3169,6 +3589,48 @@
             "time_left": "01:26:48",
             "spawn_time": "2026-05-01T03:31:44.607805",
             "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T10:31:59.237962",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T11:35:40.337888",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T11:47:40.139538",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T11:53:19.385809",
+            "time_left": "02:23:55",
+            "spawn_time": "2026-05-02T14:17:14.385784",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:56:37.657579",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T15:07:42.356726",
+            "time_left": "02:09:31",
+            "spawn_time": "2026-05-02T17:17:13.356707",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T17:37:54.510553",
+            "time_left": "01:50:39",
+            "spawn_time": "2026-05-02T19:28:33.510532",
+            "status": "N"
           }
         ]
       }
@@ -3179,38 +3641,14 @@
     "name": "Cowardly Scorpio",
     "channel": "CH. 1",
     "type": "Insect",
-    "status": "N",
+    "status": "LV2",
     "first_seen": "2026-04-25T15:19:51.573505",
-    "last_updated": "2026-05-01T00:58:49.118023",
-    "spawn_count": 7,
+    "last_updated": "2026-05-02T17:38:05.244202",
+    "spawn_count": 14,
     "locations": {
       "Baron Allerno": {
         "map": "Baron Allerno",
         "spawn_history": [
-          {
-            "detected_at": "2026-04-25T15:19:51.574229",
-            "time_left": "00:45:53",
-            "spawn_time": "2026-04-25T16:05:44.573498",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-25T16:14:31.971865",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-04-25T16:45:08.876292",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
-          {
-            "detected_at": "2026-04-25T17:03:48.479586",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV3"
-          },
           {
             "detected_at": "2026-04-25T17:20:17.742775",
             "time_left": "02:04:31",
@@ -3228,6 +3666,48 @@
             "time_left": "02:00:11",
             "spawn_time": "2026-05-01T02:59:00.118017",
             "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T10:32:10.680989",
+            "time_left": "00:25:01",
+            "spawn_time": "2026-05-02T10:57:11.680970",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T11:35:50.444902",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T12:36:46.908534",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T13:27:18.142585",
+            "time_left": "01:38:05",
+            "spawn_time": "2026-05-02T15:05:23.142574",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:56:48.025730",
+            "time_left": "00:08:36",
+            "spawn_time": "2026-05-02T15:05:24.025716",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T16:13:16.824730",
+            "time_left": "01:07:14",
+            "spawn_time": "2026-05-02T17:20:30.824722",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T17:38:05.244209",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
           }
         ]
       }
@@ -3238,55 +3718,73 @@
     "name": "Angry Rexipher",
     "channel": "CH. 1",
     "type": "Aberration",
-    "status": "LV3",
+    "status": "LV1",
     "first_seen": "2026-04-25T15:20:06.218892",
-    "last_updated": "2026-05-01T02:31:33.830358",
-    "spawn_count": 7,
+    "last_updated": "2026-05-02T17:14:21.666200",
+    "spawn_count": 16,
     "locations": {
       "Royal Mausoleum 3F": {
         "map": "Royal Mausoleum 3F",
         "spawn_history": [
           {
-            "detected_at": "2026-04-25T15:20:06.219025",
-            "time_left": "02:53:31",
-            "spawn_time": "2026-04-25T18:13:37.218887",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-05-01T00:57:45.514262",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
-          {
-            "detected_at": "2026-05-01T01:23:02.311206",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
-          {
-            "detected_at": "2026-05-01T02:04:00.369807",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
-          {
-            "detected_at": "2026-05-01T02:10:21.544759",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
-          {
-            "detected_at": "2026-05-01T02:22:54.288736",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
-          {
             "detected_at": "2026-05-01T02:31:33.830416",
             "time_left": "",
             "spawn_time": null,
             "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T10:29:53.574230",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T11:36:52.281508",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T11:55:39.682669",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T12:35:48.067624",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T13:31:06.101035",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T13:39:40.318165",
+            "time_left": "03:18:43",
+            "spawn_time": "2026-05-02T16:58:23.318154",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T13:48:50.334619",
+            "time_left": "03:09:32",
+            "spawn_time": "2026-05-02T16:58:22.334609",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:56:55.993098",
+            "time_left": "02:01:25",
+            "spawn_time": "2026-05-02T16:58:20.993086",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T17:14:21.666214",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
           }
         ]
       }
@@ -3297,26 +3795,14 @@
     "name": "Strong Gorkas",
     "channel": "CH. 1",
     "type": "Aberration",
-    "status": "LV1",
+    "status": "N",
     "first_seen": "2026-04-25T15:20:17.637268",
-    "last_updated": "2026-05-01T02:04:14.372661",
-    "spawn_count": 6,
+    "last_updated": "2026-05-02T15:18:37.679173",
+    "spawn_count": 12,
     "locations": {
       "Royal Mausoleum 2F": {
         "map": "Royal Mausoleum 2F",
         "spawn_history": [
-          {
-            "detected_at": "2026-04-25T15:20:17.637594",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-04-25T16:15:00.090062",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
           {
             "detected_at": "2026-04-25T16:44:22.322612",
             "time_left": "02:17:53",
@@ -3340,6 +3826,42 @@
             "time_left": "",
             "spawn_time": null,
             "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T10:30:30.740368",
+            "time_left": "02:03:58",
+            "spawn_time": "2026-05-02T12:34:28.740351",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T11:37:02.121837",
+            "time_left": "00:57:27",
+            "spawn_time": "2026-05-02T12:34:29.121830",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T12:39:22.586851",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T13:31:22.306310",
+            "time_left": "01:05:21",
+            "spawn_time": "2026-05-02T14:36:43.306297",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:57:05.805901",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T15:18:37.679180",
+            "time_left": "02:00:40",
+            "spawn_time": "2026-05-02T17:19:17.679168",
+            "status": "N"
           }
         ]
       }
@@ -3350,38 +3872,14 @@
     "name": "Strong Thumlord",
     "channel": "CH. 1",
     "type": "Aberration",
-    "status": "LV1",
+    "status": "N",
     "first_seen": "2026-04-25T15:20:36.170012",
-    "last_updated": "2026-05-01T02:04:24.411557",
-    "spawn_count": 6,
+    "last_updated": "2026-05-02T16:38:56.180513",
+    "spawn_count": 14,
     "locations": {
       "Royal Mausoleum 1F": {
         "map": "Royal Mausoleum 1F",
         "spawn_history": [
-          {
-            "detected_at": "2026-04-25T15:20:36.170075",
-            "time_left": "00:49:28",
-            "spawn_time": "2026-04-25T16:10:04.170009",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-04-25T16:15:51.500624",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-04-25T16:44:07.336554",
-            "time_left": "02:17:30",
-            "spawn_time": "2026-04-25T19:01:37.336548",
-            "status": "N"
-          },
-          {
-            "detected_at": "2026-05-01T00:57:30.560047",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
           {
             "detected_at": "2026-05-01T01:23:56.920860",
             "time_left": "",
@@ -3393,6 +3891,54 @@
             "time_left": "",
             "spawn_time": null,
             "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T10:30:41.477510",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T11:32:06.849766",
+            "time_left": "01:31:46",
+            "spawn_time": "2026-05-02T13:03:52.849748",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T11:37:10.773170",
+            "time_left": "01:26:40",
+            "spawn_time": "2026-05-02T13:03:50.773126",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T13:31:43.011199",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T14:57:14.873157",
+            "time_left": "00:57:00",
+            "spawn_time": "2026-05-02T15:54:14.873134",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T16:20:32.994497",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          },
+          {
+            "detected_at": "2026-05-02T16:35:58.889050",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV3"
+          },
+          {
+            "detected_at": "2026-05-02T16:38:56.180519",
+            "time_left": "02:23:44",
+            "spawn_time": "2026-05-02T19:02:40.180510",
+            "status": "N"
           }
         ]
       }
@@ -3405,54 +3951,12 @@
     "type": "Aberration",
     "status": "N",
     "first_seen": "2026-04-25T15:20:44.356419",
-    "last_updated": "2026-05-01T02:22:12.402705",
-    "spawn_count": 9,
+    "last_updated": "2026-05-02T17:14:45.935137",
+    "spawn_count": 17,
     "locations": {
       "Zachariel Crossroads": {
         "map": "Zachariel Crossroads",
         "spawn_history": [
-          {
-            "detected_at": "2026-04-25T15:20:44.356485",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-04-25T16:15:09.687736",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-04-25T16:45:22.480141",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-04-25T17:08:39.451772",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-05-01T00:57:16.136515",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV1"
-          },
-          {
-            "detected_at": "2026-05-01T01:23:48.684061",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
-          {
-            "detected_at": "2026-05-01T02:04:35.863173",
-            "time_left": "",
-            "spawn_time": null,
-            "status": "LV2"
-          },
           {
             "detected_at": "2026-05-01T02:09:42.665710",
             "time_left": "",
@@ -3463,6 +3967,54 @@
             "detected_at": "2026-05-01T02:22:12.402718",
             "time_left": "02:17:47",
             "spawn_time": "2026-05-01T04:39:59.402698",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T10:30:58.170945",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T11:37:24.476571",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV4"
+          },
+          {
+            "detected_at": "2026-05-02T11:38:58.358989",
+            "time_left": "01:48:21",
+            "spawn_time": "2026-05-02T13:27:19.358981",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T13:31:53.679234",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T14:57:21.779195",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T16:20:18.929401",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T16:42:44.011492",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T17:14:45.935156",
+            "time_left": "01:33:25",
+            "spawn_time": "2026-05-02T18:48:10.935125",
             "status": "N"
           }
         ]
@@ -3834,8 +4386,8 @@
     "type": "",
     "status": "N",
     "first_seen": "2026-04-25T15:22:33.024363",
-    "last_updated": "2026-05-01T02:01:40.674535",
-    "spawn_count": 6,
+    "last_updated": "2026-05-02T16:23:05.533162",
+    "spawn_count": 9,
     "locations": {
       "Lhadar Forest": {
         "map": "Lhadar Forest",
@@ -3874,6 +4426,24 @@
             "detected_at": "2026-05-01T02:01:40.674540",
             "time_left": "02:16:13",
             "spawn_time": "2026-05-01T04:17:53.674531",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T11:34:25.240678",
+            "time_left": "01:35:50",
+            "spawn_time": "2026-05-02T13:10:15.240664",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T14:51:30.760698",
+            "time_left": "00:58:55",
+            "spawn_time": "2026-05-02T15:50:25.760682",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T16:23:05.533166",
+            "time_left": "01:39:23",
+            "spawn_time": "2026-05-02T18:02:28.533158",
             "status": "N"
           }
         ]
@@ -3933,8 +4503,8 @@
     "type": "Dark",
     "status": "N",
     "first_seen": "2026-04-25T23:30:02.577611",
-    "last_updated": "2026-05-01T19:46:59.930996",
-    "spawn_count": 2,
+    "last_updated": "2026-05-02T17:31:14.593616",
+    "spawn_count": 4,
     "locations": {
       "Nheto Forest": {
         "map": "Nheto Forest",
@@ -3949,6 +4519,18 @@
             "detected_at": "2026-05-01T19:46:59.931005",
             "time_left": "00:17:49",
             "spawn_time": "2026-05-01T20:04:48.930989",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T11:34:51.082664",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          },
+          {
+            "detected_at": "2026-05-02T17:31:14.593622",
+            "time_left": "02:23:05",
+            "spawn_time": "2026-05-02T19:54:19.593612",
             "status": "N"
           }
         ]
@@ -4049,8 +4631,8 @@
     "type": "",
     "status": "N",
     "first_seen": "2026-04-26T00:31:13.028108",
-    "last_updated": "2026-05-01T19:47:39.339054",
-    "spawn_count": 2,
+    "last_updated": "2026-05-02T12:10:28.046626",
+    "spawn_count": 3,
     "locations": {
       "": {
         "map": "",
@@ -4065,6 +4647,12 @@
             "detected_at": "2026-05-01T19:47:39.339062",
             "time_left": "00:17:08",
             "spawn_time": "2026-05-01T20:04:47.339049",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T12:10:28.046633",
+            "time_left": "01:47:58",
+            "spawn_time": "2026-05-02T13:58:26.046619",
             "status": "N"
           }
         ]
@@ -4361,8 +4949,8 @@
     "type": "Demon",
     "status": "N",
     "first_seen": "2026-05-01T00:58:29.997308",
-    "last_updated": "2026-05-01T01:59:52.634594",
-    "spawn_count": 5,
+    "last_updated": "2026-05-02T17:13:54.926511",
+    "spawn_count": 6,
     "locations": {
       "Investigation Room": {
         "map": "Investigation Room",
@@ -4395,6 +4983,12 @@
             "detected_at": "2026-05-01T01:59:52.634604",
             "time_left": "03:37",
             "spawn_time": "2026-05-01T02:03:29.634589",
+            "status": "N"
+          },
+          {
+            "detected_at": "2026-05-02T17:13:54.926516",
+            "time_left": "03:37",
+            "spawn_time": "2026-05-02T17:17:31.926507",
             "status": "N"
           }
         ]
@@ -4668,6 +5262,121 @@
             "detected_at": "2026-05-01T21:14:56.268346",
             "time_left": "02",
             "spawn_time": null,
+            "status": "N"
+          }
+        ]
+      }
+    }
+  },
+  "strong riteris_Unknown": {
+    "name": "Strong Riteris",
+    "map_id": "strong_riteris",
+    "channel": null,
+    "type": "Aberration",
+    "status": "LV1",
+    "first_seen": "2026-05-02T11:25:17.288413",
+    "last_updated": "2026-05-02T11:25:17.288417",
+    "spawn_count": 1,
+    "locations": {
+      "Grand Corridor": {
+        "map": "Grand Corridor",
+        "spawn_history": [
+          {
+            "detected_at": "2026-05-02T11:25:17.288485",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV1"
+          }
+        ]
+      }
+    }
+  },
+  "sun_CH. 3": {
+    "name": "Sun",
+    "map_id": "",
+    "channel": "CH. 3",
+    "type": "",
+    "status": "N",
+    "first_seen": "2026-05-02T11:34:56.343064",
+    "last_updated": "2026-05-02T11:34:56.343066",
+    "spawn_count": 1,
+    "locations": {
+      "": {
+        "map": "",
+        "spawn_history": [
+          {
+            "detected_at": "2026-05-02T11:34:56.343109",
+            "time_left": "03:37",
+            "spawn_time": "2026-05-02T11:38:33.343061",
+            "status": "N"
+          }
+        ]
+      }
+    }
+  },
+  "strong fireload_--": {
+    "name": "Strong Fireload",
+    "map_id": "strong_fireload",
+    "channel": "--",
+    "type": "Beast",
+    "status": "LV2",
+    "first_seen": "2026-05-02T11:49:08.028980",
+    "last_updated": "2026-05-02T11:49:08.028982",
+    "spawn_count": 1,
+    "locations": {
+      "Main Building": {
+        "map": "Main Building",
+        "spawn_history": [
+          {
+            "detected_at": "2026-05-02T11:49:08.029046",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV2"
+          }
+        ]
+      }
+    }
+  },
+  "jonael memorial dist._CH. 2": {
+    "name": "Jonael Memorial Dist.",
+    "map_id": "",
+    "channel": "CH. 2",
+    "type": "",
+    "status": "LV3",
+    "first_seen": "2026-05-02T12:40:40.002735",
+    "last_updated": "2026-05-02T12:40:40.002738",
+    "spawn_count": 1,
+    "locations": {
+      "": {
+        "map": "",
+        "spawn_history": [
+          {
+            "detected_at": "2026-05-02T12:40:40.002813",
+            "time_left": "",
+            "spawn_time": null,
+            "status": "LV3"
+          }
+        ]
+      }
+    }
+  },
+  "strong dionia_CH. 3": {
+    "name": "Strong Dionia",
+    "map_id": "strong_dionia",
+    "channel": "CH. 3",
+    "type": "Dark",
+    "status": "N",
+    "first_seen": "2026-05-02T14:50:45.480523",
+    "last_updated": "2026-05-02T14:50:45.480526",
+    "spawn_count": 1,
+    "locations": {
+      "Nheto Forest": {
+        "map": "Nheto Forest",
+        "spawn_history": [
+          {
+            "detected_at": "2026-05-02T14:50:45.480602",
+            "time_left": "02:11:52",
+            "spawn_time": "2026-05-02T17:02:37.480517",
             "status": "N"
           }
         ]

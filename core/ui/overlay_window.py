@@ -204,19 +204,19 @@ class OverlayWindow(QMainWindow):
             return bosses
 
         tab_ranges = {
-            "1-10": (1, 10),
-            "11-20": (11, 20),
-            "21-30": (21, 30),
-            "31-40": (31, 40),
-            "41-50": (41, 50),
-            "51-60": (51, 60),
-            "61-70": (61, 70),
-            "71-80": (71, 80),
-            "81-90": (81, 90),
-            "91-100": (91, 100),
-            "101-110": (101, 110),
-            "111-120": (111, 120),
-            "121-130": (121, 130),
+            "E3": (22, 28),
+            "E4": (32, 38),
+            "E5": (44, 48),
+            "E6": (52, 59),
+            "E7": (62, 68),
+            "E8": (70, 74),
+            "E9": (75, 79),
+            "E10": (80, 83),
+            "E11": (85, 89),
+            "E12": (90, 93),
+            "E13": (95, 103),
+            "E14": (105, 113),
+            "E15": (115, 123),
         }
 
         selected_ranges = [tab_ranges[k] for k in self._active_tabs if k in tab_ranges]
@@ -482,7 +482,7 @@ class OverlayWindow(QMainWindow):
         tab_layout.setSpacing(6)
         tab_layout.addStretch()
 
-        for tab_key, tab_label in [("all", "All"), ("1-10", "1-10"), ("11-20", "11-20"), ("21-30", "21-30"), ("31-40", "31-40"), ("41-50", "41-50"), ("51-60", "51-60"), ("61-70", "61-70"), ("71-80", "71-80"), ("81-90", "81-90"), ("91-100", "91-100"), ("101-110", "101-110"), ("111-120", "111-120"), ("121-130", "121-130")]:
+        for tab_key, tab_label in [("all", "All"), ("E2", "E2"), ("E3", "E3"), ("E4", "E4"), ("E5", "E5"), ("E6", "E6"), ("E7", "E7"), ("E8", "E8"), ("E9", "E9"), ("E10", "E10"), ("E11", "E11"), ("E12", "E12"), ("E13", "E13"), ("E14", "E14"), ("E15", "E15")]:
             btn = QPushButton(tab_label)
             btn.setFont(QFont("Segoe UI", 9, QFont.Weight.Bold))
             btn.setCursor(Qt.CursorShape.PointingHandCursor)
@@ -909,6 +909,21 @@ class OverlayWindow(QMainWindow):
                     row.setVisible(False)
                     continue
 
+                spawn_time_str = b.get('spawn_time', '')
+                if spawn_time_str:
+                    try:
+                        spawn_time = datetime.fromisoformat(spawn_time_str)
+                        if spawn_time < datetime.now():
+                            b['last_updated'] = datetime.now().isoformat()
+                            if status == 'N':
+                                b['status'] = 'LV1'
+                                b['spawn_time'] = ''
+                                b['countdown'] = ''
+                                b['time_display'] = '-'
+                                status = 'LV1'
+                    except:
+                        pass
+
                 lookup_map, lookup_lv, lookup_type = get_boss_info(name)
 
                 boss_type = b.get('type', '') or lookup_type
@@ -998,7 +1013,9 @@ class OverlayWindow(QMainWindow):
                 update_date = "--"
                 minutes_elapsed = None
                 last_updated_dt_val = None
-                if status != "-" and status != "--":
+                if status == "N":
+                    update_date = "-"
+                elif status != "-" and status != "--":
                     last_updated = b.get('last_updated', '')
                     if last_updated:
                         try:
@@ -1028,6 +1045,7 @@ class OverlayWindow(QMainWindow):
                         except:
                             pass
 
+                row.set_raw_boss(b)
                 row.set_data(name, map_name or '--', channel, status, boss_type, time_display, map_lv, urgent if status == "N" else False, update_date, expired, str(b.get('rating', 0)))
                 if last_updated_dt_val is not None:
                     row.set_update_date(update_date, minutes_elapsed, last_updated_dt_val)
@@ -1149,6 +1167,7 @@ class OverlayWindow(QMainWindow):
             f"{b.get('name', '').lower()}_{b.get('channel', '--')}": b
             for b in self._boss_data
         }
+        needs_resort = False
         for row in self.boss_rows:
             if not row.isVisible() or not row._boss_key:
                 continue
@@ -1161,10 +1180,23 @@ class OverlayWindow(QMainWindow):
                 continue
             try:
                 spawn_time = datetime.fromisoformat(spawn_time_str)
-                if spawn_time > datetime.now():
+                now = datetime.now()
+                if spawn_time > now:
                     row.update_time(spawn_time.strftime("%H:%M"))
+                else:
+                    boss['last_updated'] = now.isoformat()
+                    if boss.get('status', 'N') == 'N':
+                        boss['status'] = 'LV1'
+                        boss['spawn_time'] = ''
+                        boss['countdown'] = ''
+                        boss['time_display'] = '-'
+                        needs_resort = True
+                    row.set_update_date(now.strftime("%H:%M"), 0, now)
             except Exception:
                 pass
+
+        if needs_resort:
+            self._auto_sort_bosses()
 
     def _get_status_priority(self, status: str) -> int:
         priority_map = {

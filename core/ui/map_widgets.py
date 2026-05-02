@@ -14,6 +14,7 @@ from PyQt6.QtWidgets import (
 )
 
 from ..map_level import get_map_coordinates
+from .timeline_widget import _TimelineCanvas, TimelineRowModel
 
 
 class MapImageWidget(QWidget):
@@ -108,7 +109,7 @@ class MapImageWidget(QWidget):
             img_rect = scaled_pixmap.rect()
             img_rect.moveCenter(self.rect().center())
         else:
-            painter.fillRect(self.rect(), QColor("#1E293B"))
+            painter.fillRect(self.rect(), QColor("#E2E8F0"))
 
 
 class MapImagePopup(QWidget):
@@ -128,9 +129,9 @@ class MapImagePopup(QWidget):
         self._container = QFrame(self)
         self._container.setStyleSheet("""
             QFrame {
-                background: rgba(15, 23, 42, 0.98);
-                border: 1px solid rgba(99, 102, 241, 0.4);
-                border-radius: 10px;
+                background: rgba(245, 240, 232, 0.98);
+                border: 1px solid rgba(54, 104, 141, 0.40);
+                border-radius: 12px;
             }
         """)
         container_layout = QVBoxLayout(self._container)
@@ -142,21 +143,22 @@ class MapImagePopup(QWidget):
 
         self._icon_label = QLabel("🗺")
         self._icon_label.setFont(QFont("Segoe UI", 11))
+        self._icon_label.setStyleSheet("color: #5A6A78;")
         header_layout.addWidget(self._icon_label)
 
         self._name_label = QLabel("")
         self._name_label.setFont(QFont("Segoe UI", 11, QFont.Weight.Bold))
-        self._name_label.setStyleSheet("color: #E2E8F0;")
+        self._name_label.setStyleSheet("color: #1A2A38;")
         header_layout.addWidget(self._name_label)
 
         self._level_label = QLabel("")
         self._level_label.setFont(QFont("Segoe UI", 10, QFont.Weight.Bold))
         self._level_label.setStyleSheet("""
-            color: #A5B4FC;
-            background: rgba(99, 102, 241, 0.18);
+            color: #1A5A80;
+            background: rgba(54, 104, 141, 0.12);
             padding: 2px 8px;
             border-radius: 4px;
-            border: 1px solid rgba(99, 102, 241, 0.35);
+            border: 1px solid rgba(54, 104, 141, 0.30);
         """)
         header_layout.addWidget(self._level_label)
         header_layout.addStretch()
@@ -169,7 +171,7 @@ class MapImagePopup(QWidget):
         self._boss_section.setSpacing(4)
         boss_label = QLabel("👹 Boss")
         boss_label.setFont(QFont("Segoe UI", 9, QFont.Weight.Bold))
-        boss_label.setStyleSheet("color: #94A3B8;")
+        boss_label.setStyleSheet("color: #5A6A78;")
         boss_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self._boss_section.addWidget(boss_label)
 
@@ -177,10 +179,10 @@ class MapImagePopup(QWidget):
         self._boss_image_widget.setFixedSize(220, 220)
         self._boss_image_widget.setStyleSheet("""
             QLabel {
-                background: #1E293B;
-                border: 1px solid rgba(99, 102, 241, 0.3);
-                border-radius: 6px;
-                color: #64748B;
+                background: rgba(255, 255, 255, 0.60);
+                border: 1px solid rgba(54, 104, 141, 0.25);
+                border-radius: 8px;
+                color: #A89880;
             }
         """)
         self._boss_image_widget.setAlignment(Qt.AlignmentFlag.AlignCenter)
@@ -191,7 +193,7 @@ class MapImagePopup(QWidget):
         self._map_section.setSpacing(4)
         map_label = QLabel("🗺 Map")
         map_label.setFont(QFont("Segoe UI", 9, QFont.Weight.Bold))
-        map_label.setStyleSheet("color: #94A3B8;")
+        map_label.setStyleSheet("color: #5A6A78;")
         map_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self._map_section.addWidget(map_label)
 
@@ -201,6 +203,16 @@ class MapImagePopup(QWidget):
         images_layout.addLayout(self._map_section)
 
         container_layout.addLayout(images_layout)
+        
+        # Timeline Canvas (Hidden by default until model is set)
+        self._timeline_canvas = _TimelineCanvas(self._container)
+        self._timeline_canvas.setStyleSheet("""
+            background: rgba(255, 255, 255, 0.40);
+            border: 1px solid rgba(54, 104, 141, 0.15);
+            border-radius: 10px;
+        """)
+        self._timeline_canvas.hide()
+        container_layout.addWidget(self._timeline_canvas)
 
         self._layout.addWidget(self._container)
 
@@ -242,6 +254,21 @@ class MapImagePopup(QWidget):
 
         self._map_image_widget.set_boss_spawn_color(color)
 
+        # Hide timeline initially when resetting map data
+        self._timeline_canvas.hide()
+        self._timeline_canvas.set_model(None)
+
+        self.adjustSize()
+
+    def set_timeline_model(self, model: Optional[TimelineRowModel]):
+        """Set timeline model and show timeline canvas if model exists."""
+        if model:
+            self._timeline_canvas.update_now()
+            self._timeline_canvas.set_model(model)
+            self._timeline_canvas.show()
+        else:
+            self._timeline_canvas.hide()
+            self._timeline_canvas.set_model(None)
         self.adjustSize()
 
     def show_at(self, pos: QPoint):

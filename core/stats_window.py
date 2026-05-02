@@ -12,6 +12,7 @@ from PyQt6.QtWidgets import (
     QLabel,
     QLineEdit,
     QPushButton,
+    QStackedWidget,
     QTableWidget,
     QTableWidgetItem,
     QVBoxLayout,
@@ -21,6 +22,7 @@ from PyQt6.QtWidgets import (
 )
 
 from .ui.map_widgets import MapImagePopup
+from .ui.timeline_widget import TimelineView
 
 
 class NumericTableWidgetItem(QTableWidgetItem):
@@ -108,10 +110,12 @@ class StatsPopupWindow(QWidget):
         self._drag_pos: Optional[QPoint] = None
         self._all_rows: List[Dict[str, Any]] = []
         self._displayed_rows: List[Dict[str, Any]] = []
+        self._mode: str = "checklist"
         self._init_ui()
 
     def _init_ui(self):
-        self.setFixedSize(720, 520)
+        self.setMinimumSize(720, 520)
+        self.resize(900, 620)
 
         outer = QVBoxLayout(self)
         outer.setContentsMargins(0, 0, 0, 0)
@@ -147,6 +151,20 @@ class StatsPopupWindow(QWidget):
         self._count_lbl.setFont(QFont("Segoe UI", 9))
         self._count_lbl.setStyleSheet("color: #8A7A68; background: transparent; border: none;")
         title_row.addWidget(self._count_lbl)
+
+        self._checklist_btn = QPushButton("Checklist")
+        self._checklist_btn.setFixedSize(86, 26)
+        self._checklist_btn.setCursor(Qt.CursorShape.PointingHandCursor)
+        self._checklist_btn.setFont(QFont("Segoe UI", 9, QFont.Weight.Bold))
+        self._checklist_btn.clicked.connect(lambda: self._set_mode("checklist"))
+        title_row.addWidget(self._checklist_btn)
+
+        self._timeline_btn = QPushButton("Timeline")
+        self._timeline_btn.setFixedSize(78, 26)
+        self._timeline_btn.setCursor(Qt.CursorShape.PointingHandCursor)
+        self._timeline_btn.setFont(QFont("Segoe UI", 9, QFont.Weight.Bold))
+        self._timeline_btn.clicked.connect(lambda: self._set_mode("timeline"))
+        title_row.addWidget(self._timeline_btn)
 
         refresh_btn = QPushButton("↻  Refresh")
         refresh_btn.setFixedSize(88, 26)
@@ -191,7 +209,9 @@ class StatsPopupWindow(QWidget):
         main.addLayout(title_row)
 
         # Search box
-        search_row = QHBoxLayout()
+        self._search_container = QWidget()
+        self._search_container.setStyleSheet("background: transparent; border: none;")
+        search_row = QHBoxLayout(self._search_container)
         search_row.setSpacing(6)
         self.search_box = QLineEdit()
         self.search_box.setPlaceholderText("🔍 Filter bosses or maps...")
@@ -212,7 +232,7 @@ class StatsPopupWindow(QWidget):
         """)
         self.search_box.textChanged.connect(self._on_search_changed)
         search_row.addWidget(self.search_box)
-        main.addLayout(search_row)
+        main.addWidget(self._search_container)
 
         # Checklist table
         self.table = QTableWidget()
@@ -264,7 +284,15 @@ class StatsPopupWindow(QWidget):
                 color: #0E3A58;
             }
         """)
-        main.addWidget(self.table, 1)
+
+        # Timeline view
+        self._timeline_view = TimelineView()
+
+        # Stack Checklist | Timeline
+        self._stack = QStackedWidget()
+        self._stack.addWidget(self.table)  # index 0
+        self._stack.addWidget(self._timeline_view)  # index 1
+        main.addWidget(self._stack, 1)
 
         # Divider
         div = QFrame()
@@ -274,6 +302,54 @@ class StatsPopupWindow(QWidget):
         main.addWidget(div)
 
         outer.addWidget(container)
+        self._apply_mode_styles()
+
+    def _apply_mode_styles(self) -> None:
+        active_style = """
+            QPushButton {
+                color: #1A5A80;
+                background: rgba(54, 104, 141, 0.18);
+                border: 1px solid rgba(54, 104, 141, 0.45);
+                border-radius: 6px;
+                padding: 4px 10px;
+                font-weight: 700;
+            }
+        """
+        inactive_style = """
+            QPushButton {
+                color: #A89880;
+                background: transparent;
+                border: 1px solid rgba(189, 165, 137, 0.30);
+                border-radius: 6px;
+                padding: 4px 10px;
+                font-weight: 600;
+            }
+            QPushButton:hover {
+                color: #1A2A38;
+                background: rgba(54, 104, 141, 0.08);
+                border: 1px solid rgba(54, 104, 141, 0.25);
+            }
+        """
+        if self._mode == "timeline":
+            self._timeline_btn.setStyleSheet(active_style)
+            self._checklist_btn.setStyleSheet(inactive_style)
+        else:
+            self._checklist_btn.setStyleSheet(active_style)
+            self._timeline_btn.setStyleSheet(inactive_style)
+
+    def _set_mode(self, mode: str) -> None:
+        mode = mode or "checklist"
+        if mode not in ("checklist", "timeline"):
+            mode = "checklist"
+        self._mode = mode
+        self._apply_mode_styles()
+        if self._mode == "timeline":
+            self._search_container.setVisible(False)
+            self._stack.setCurrentIndex(1)
+            self._timeline_view.refresh(getattr(self, "_last_bosses", []), getattr(self, "_last_persistent", {}))
+        else:
+            self._search_container.setVisible(True)
+            self._stack.setCurrentIndex(0)
 
     def _on_search_changed(self, text: str):
         self._apply_filter(text.strip().lower())
@@ -331,6 +407,18 @@ class StatsPopupWindow(QWidget):
             self._last_bosses = current_bosses
         elif not hasattr(self, '_last_bosses'):
             self._last_bosses = []
+
+        # Load persistent boss_data.json for timeline phase extraction
+        persistent_path = os.path.join(os.path.dirname(self._map_path), "..", "boss_data.json")
+        persistent_path = os.path.abspath(persistent_path)
+        persistent = {}
+        try:
+            if os.path.exists(persistent_path):
+                with open(persistent_path, "r", encoding="utf-8") as f:
+                    persistent = json.load(f)
+        except Exception:
+            persistent = {}
+        self._last_persistent = persistent
         
         self._all_rows = self._loader.load_checklist(self._last_bosses)
         self._apply_filter(self.search_box.text().strip().lower())
@@ -342,6 +430,9 @@ class StatsPopupWindow(QWidget):
                 item = self.table.item(i, j)
                 if item:
                     item.setBackground(bg)
+
+        if getattr(self, "_mode", "checklist") == "timeline":
+            self._timeline_view.refresh(self._last_bosses, self._last_persistent)
 
     def _on_cell_entered(self, row, col):
         if row < 0 or row >= self.table.rowCount():

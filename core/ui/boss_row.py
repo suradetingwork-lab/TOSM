@@ -9,7 +9,17 @@ from PyQt6.QtWidgets import QFrame, QHBoxLayout, QLabel, QPushButton
 
 from .widgets import StarRatingWidget
 from .map_widgets import MapImagePopup
-
+from .timeline_widget import (
+    TimelineRowModel, 
+    _try_parse_dt, 
+    _status_to_current_phase, 
+    _extract_phase_times_current_cycle,
+    _norm_boss_name,
+    _norm_channel,
+    build_timeline_model
+)
+import json
+import os
 
 class BossRow(QFrame):
     """Single row displaying boss information."""
@@ -36,6 +46,7 @@ class BossRow(QFrame):
         self._boss_key = ""
         self._current_status = "N"
         self._last_updated_dt: Optional[datetime] = None
+        self._raw_boss_data = {}
         self.setFrameShape(QFrame.Shape.NoFrame)
         self.setStyleSheet(self._ROW_DEFAULT)
 
@@ -152,6 +163,9 @@ class BossRow(QFrame):
 
     def _on_delete_clicked(self):
         self.delete_clicked.emit(self._boss_name, self._channel)
+
+    def set_raw_boss(self, boss_data: dict):
+        self._raw_boss_data = boss_data
 
     def set_data(self, name: str, map_name: str, channel: str, status: str, boss_type: str = "", time: str = "--", map_lv: str = "", urgent: bool = False, update_date: str = "--", expired: bool = False, note: str = "--"):
         self._boss_name = name
@@ -278,14 +292,14 @@ class BossRow(QFrame):
             """)
 
     def set_update_date(self, update_date: str, minutes_elapsed: int = None, last_updated_dt: Optional[datetime] = None):
+        self._last_updated_dt = last_updated_dt
         if last_updated_dt is not None:
-            self._last_updated_dt = last_updated_dt
             self.update_elapsed_display()
             return
 
         self.update_date_label.setText(update_date)
 
-        if update_date == "--" or update_date == "":
+        if update_date in ("--", "", "-"):
             self.update_date_label.setStyleSheet("color: #D0C0B0; background: transparent;")
             return
 
@@ -383,6 +397,39 @@ class BossRow(QFrame):
             return
 
         self._popup.set_map_data(self._map_name, self._map_lv, self._boss_urgent, self._boss_name)
+
+        # Build timeline model if we have raw data
+        if self._raw_boss_data:
+            name = self._boss_name
+            channel = self._channel
+            status = self._current_status
+            boss_type = self._raw_boss_data.get("type", "")
+            map_name = self._map_name
+            spawn_time = _try_parse_dt(self._raw_boss_data.get("spawn_time"))
+            current_phase = _status_to_current_phase(status)
+            
+            # Replicate TimelineView's robust lookup
+            norm_name = _norm_boss_name(name)
+            norm_ch = _norm_channel(channel)
+            record = None
+            try:
+                root_dir = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+                persistent_path = os.path.join(root_dir, "boss_data.json")
+                if os.path.exists(persistent_path):
+                    with open(persistent_path, "r", encoding="utf-8") as f:
+                        persistent = json.load(f)
+                        for r in persistent.values():
+                            if _norm_boss_name(r.get("name", "")) == norm_name and \
+                               _norm_channel(r.get("channel", "")) == norm_ch:
+                                record = r
+                                break
+            except Exception:
+                pass
+
+            model = build_timeline_model(self._raw_boss_data, record, datetime.now())
+            self._popup.set_timeline_model(model)
+        else:
+            self._popup.set_timeline_model(None)
 
         popup_pos = self.mapToGlobal(QPoint(0, 0))
         popup_pos.setY(popup_pos.y() - self._popup.height() - 8)
