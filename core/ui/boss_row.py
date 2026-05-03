@@ -52,7 +52,7 @@ class BossRow(QFrame):
 
         layout = QHBoxLayout(self)
         layout.setContentsMargins(8, 5, 8, 5)
-        layout.setSpacing(4)
+        layout.setSpacing(8)
 
         # Boss Name
         self.name_label = QLabel("")
@@ -80,7 +80,7 @@ class BossRow(QFrame):
             padding: 2px 6px;
             border-radius: 4px;
         """)
-        self.lv_label.setFixedWidth(45)
+        self.lv_label.setFixedWidth(55)
         self.lv_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(self.lv_label)
 
@@ -94,7 +94,7 @@ class BossRow(QFrame):
             border-radius: 4px;
             border: 1px solid rgba(54, 104, 141, 0.20);
         """)
-        self.channel_label.setFixedWidth(50)
+        self.channel_label.setFixedWidth(60)
         self.channel_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(self.channel_label)
 
@@ -108,7 +108,7 @@ class BossRow(QFrame):
             border-radius: 10px;
             border: 1px solid rgba(54, 104, 141, 0.15);
         """)
-        self.boss_status_label.setFixedWidth(55)
+        self.boss_status_label.setFixedWidth(70)
         self.boss_status_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(self.boss_status_label)
 
@@ -116,7 +116,7 @@ class BossRow(QFrame):
         self.time_label = QLabel("")
         self.time_label.setFont(QFont("Segoe UI", 10, QFont.Weight.Bold))
         self.time_label.setStyleSheet("color: #8A7A68; background: transparent;")
-        self.time_label.setFixedWidth(55)
+        self.time_label.setFixedWidth(65)
         self.time_label.setAlignment(Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter)
         layout.addWidget(self.time_label)
 
@@ -124,7 +124,7 @@ class BossRow(QFrame):
         self.update_date_label = QLabel("")
         self.update_date_label.setFont(QFont("Segoe UI", 9))
         self.update_date_label.setStyleSheet("color: #A89880; background: transparent;")
-        self.update_date_label.setFixedWidth(65)
+        self.update_date_label.setFixedWidth(75)
         self.update_date_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(self.update_date_label)
 

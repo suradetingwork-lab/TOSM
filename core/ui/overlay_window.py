@@ -24,6 +24,7 @@ from PyQt6.QtWidgets import (
     QSlider,
     QLineEdit,
     QGraphicsDropShadowEffect,
+    QMessageBox,
 )
 import winsound
 
@@ -61,6 +62,7 @@ class OverlayWindow(QMainWindow):
         self._active_tabs: set = {"all"}
         self._tab_buttons: Dict[str, QPushButton] = {}
         self._search_filter = ""
+        self._active_status_filter: Optional[str] = None
 
         self._is_expanded = False
         self._collapsed_height = 350
@@ -112,6 +114,7 @@ class OverlayWindow(QMainWindow):
         
         if hasattr(self, '_summary_bar'):
             self._summary_bar.refresh(self._boss_data)
+            self._summary_bar.set_active_filter(self._active_status_filter)
 
     def _on_geom_anim_state_changed(self, new_state, old_state):
         effect = self.central_widget.graphicsEffect()
@@ -166,6 +169,46 @@ class OverlayWindow(QMainWindow):
         self._update_tab_styles()
         sorted_bosses = self._sort_bosses(self._boss_data)
         self._update_display(sorted_bosses)
+
+    def _on_status_filter_clicked(self, key: str) -> None:
+        if self._active_status_filter == key:
+            self._active_status_filter = None
+        else:
+            self._active_status_filter = key
+        self._summary_bar.set_active_filter(self._active_status_filter)
+        sorted_bosses = self._sort_bosses(self._boss_data)
+        self._update_display(sorted_bosses)
+
+    def _filter_by_status(self, bosses: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        if not self._active_status_filter:
+            return bosses
+
+        now = datetime.now()
+        filtered = []
+        for b in bosses:
+            s = b.get('status', 'N')
+            spawn_str = b.get('spawn_time')
+            spawn_dt = None
+            if spawn_str:
+                try:
+                    spawn_dt = datetime.fromisoformat(spawn_str)
+                except (ValueError, TypeError):
+                    pass
+
+            is_coming = False
+            is_soon = False
+
+            if s != "N" or (spawn_dt and spawn_dt < now):
+                is_coming = True
+            if s == "N" or (spawn_dt and spawn_dt > now):
+                is_soon = True
+
+            if self._active_status_filter == "coming" and is_coming:
+                filtered.append(b)
+            elif self._active_status_filter == "soon" and is_soon:
+                filtered.append(b)
+
+        return filtered
 
     def _update_tab_styles(self) -> None:
         active_style = """
@@ -275,6 +318,7 @@ class OverlayWindow(QMainWindow):
                 self._update_display(sorted_bosses)
                 if hasattr(self, '_summary_bar'):
                     self._summary_bar.refresh(self._boss_data)
+                    self._summary_bar.set_active_filter(self._active_status_filter)
                 return True
             return False
         except Exception:
@@ -316,7 +360,6 @@ class OverlayWindow(QMainWindow):
             | Qt.WindowType.WindowStaysOnTopHint
             | Qt.WindowType.WindowMinMaxButtonsHint
         )
-        self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
         self.setAttribute(Qt.WidgetAttribute.WA_TransparentForMouseEvents, False)
         self.setWindowOpacity(self._base_opacity)
 
@@ -348,6 +391,7 @@ class OverlayWindow(QMainWindow):
 
         # ── Summary stats bar ──────────────────────────────────────
         self._summary_bar = SummaryStatsBar()
+        self._summary_bar.filter_clicked.connect(self._on_status_filter_clicked)
 
         # ── Search / filter box ────────────────────────────────────
         search_container = QWidget()
@@ -385,26 +429,31 @@ class OverlayWindow(QMainWindow):
         search_layout.addWidget(self.filter_count_label)
 
         # ── Column headers ─────────────────────────────────────────
-        headers = QHBoxLayout()
-        headers.setContentsMargins(8, 2, 8, 2)
-        headers.setSpacing(4)
+        headers_container = QWidget()
+        headers_container.setStyleSheet("""
+            background: rgba(54, 104, 141, 0.06);
+            border-bottom: 1px solid rgba(54, 104, 141, 0.20);
+            border-radius: 6px;
+        """)
+        headers = QHBoxLayout(headers_container)
+        headers.setContentsMargins(8, 6, 8, 6)
+        headers.setSpacing(8)
 
         headers_data = [
-            ("Boss",    140, False),
-            ("Map",     140, False),
-            ("LV",       45, True),
-            ("CH",       50, True),
-            ("Status",   55, True),
-            ("Spawn",    55, True),
-            ("Scanned",  65, True),
-            ("Rating",  100, False),
+            ("Boss",    140, False, False),
+            ("Map",     140, False, False),
+            ("LV",       55, True,  False),
+            ("CH",       60, True,  False),
+            ("Status",   70, True,  False),
+            ("Spawn",    65, True,  True),
+            ("Scanned",  75, True,  False),
+            ("Rating",  100, False, False),
         ]
 
-        for text, width, sortable in headers_data:
+        for text, width, sortable, align_right in headers_data:
             if sortable:
                 column_key = text.lower().replace(' ', '_')
-                is_spawn = (text == "Spawn")
-                header = SortableHeaderButton(text, width, align_right=is_spawn)
+                header = SortableHeaderButton(text, width, align_right=align_right)
                 header.clicked.connect(lambda column=column_key: self._on_header_clicked(column))
                 self._header_buttons[column_key] = header
                 if column_key == "status":
@@ -413,6 +462,7 @@ class OverlayWindow(QMainWindow):
                 header = QLabel(text)
                 header.setFont(QFont("Segoe UI", 9, QFont.Weight.Bold))
                 header.setStyleSheet("color: #8A7A68; background: transparent; letter-spacing: 0.5px;")
+                header.setAlignment(Qt.AlignmentFlag.AlignCenter)
             header.setFixedWidth(width)
             headers.addWidget(header)
 
@@ -677,6 +727,30 @@ class OverlayWindow(QMainWindow):
         self.maximize_btn.clicked.connect(self._maximize_window)
         header_layout.addWidget(self.maximize_btn)
 
+        # Close button
+        self.close_btn = QPushButton("✕")
+        self.close_btn.setFont(QFont("Segoe UI", 12, QFont.Weight.Bold))
+        self.close_btn.setFixedSize(28, 28)
+        self.close_btn.setCursor(Qt.CursorShape.PointingHandCursor)
+        self.close_btn.setStyleSheet("""
+            QPushButton {
+                color: #8A7A68;
+                background: transparent;
+                border: 1px solid rgba(189, 165, 137, 0.30);
+                border-radius: 6px;
+            }
+            QPushButton:hover {
+                color: #DC2626;
+                background: rgba(220, 38, 38, 0.08);
+                border: 1px solid rgba(220, 38, 38, 0.30);
+            }
+            QPushButton:pressed {
+                background: rgba(220, 38, 38, 0.15);
+            }
+        """)
+        self.close_btn.clicked.connect(self._confirm_close)
+        header_layout.addWidget(self.close_btn)
+
         self.drag_hint = QLabel("Alt+Drag")
         self.drag_hint.setFont(QFont("Segoe UI", 8))
         self.drag_hint.setStyleSheet("color: #C8B8A8; background: transparent;")
@@ -685,7 +759,7 @@ class OverlayWindow(QMainWindow):
         # ── Assemble layout ────────────────────────────────────────
         self.layout.addWidget(self._summary_bar)
         self.layout.addWidget(search_container)
-        self.layout.addLayout(headers)
+        self.layout.addWidget(headers_container)
         self.layout.addWidget(self.scroll_area, 1)
         self.layout.addWidget(div1)
         self.layout.addWidget(tab_container)
@@ -693,7 +767,7 @@ class OverlayWindow(QMainWindow):
         self.layout.addLayout(header_layout)
         self.layout.addWidget(status_container)
 
-        self.setMinimumSize(820, 286)
+        self.setMinimumSize(860, 286)
 
         self.size_grip = QSizeGrip(self)
         self.size_grip.setStyleSheet("""
@@ -734,6 +808,17 @@ class OverlayWindow(QMainWindow):
                     background: rgba(54, 104, 141, 0.08);
                 }
             """)
+
+    def _confirm_close(self) -> None:
+        reply = QMessageBox.question(
+            self,
+            "ยืนยันการปิด",
+            "คุณต้องการปิด Boss Tracker ใช่หรือไม่?",
+            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
+            QMessageBox.StandardButton.No
+        )
+        if reply == QMessageBox.StandardButton.Yes:
+            self.close()
 
     def _toggle_stats_window(self) -> None:
         from ..stats_window import StatsPopupWindow
@@ -856,6 +941,7 @@ class OverlayWindow(QMainWindow):
         self._save_ui_state()
         if hasattr(self, '_summary_bar'):
             self._summary_bar.refresh(self._boss_data)
+            self._summary_bar.set_active_filter(self._active_status_filter)
         if self._stats_window is not None and self._stats_window.isVisible():
             self._stats_window.refresh(self._boss_data)
 
@@ -868,6 +954,9 @@ class OverlayWindow(QMainWindow):
     def _update_display(self, sorted_bosses: List[Dict[str, Any]]) -> None:
         sorted_bosses = self._filter_by_tab(sorted_bosses)
         tab_filtered = sorted_bosses
+
+        sorted_bosses = self._filter_by_status(sorted_bosses)
+        status_filtered = sorted_bosses
 
         sorted_bosses = self._filter_by_name(sorted_bosses)
 
@@ -882,7 +971,7 @@ class OverlayWindow(QMainWindow):
                         (s and s not in ['N', '-', '--']) or
                         (b.get('last_updated') and b.get('last_updated') != '')
                     )
-                total = sum(1 for b in tab_filtered if _has_data(b))
+                total = sum(1 for b in status_filtered if _has_data(b))
                 shown = sum(1 for b in sorted_bosses if _has_data(b))
                 self.filter_count_label.setText(f"{shown} of {total} bosses")
                 self.filter_count_label.setVisible(True)
@@ -1255,6 +1344,9 @@ class OverlayWindow(QMainWindow):
                 return (spawn_timestamp, boss.get('name', '').lower())
 
             elif self._sort_column == "scanned":
+                status = boss.get('status', 'N')
+                if status in ('N', '-', '--'):
+                    return (0, 0, boss.get('name', '').lower())
                 last_updated = boss.get('last_updated', '')
                 if last_updated:
                     try:
@@ -1264,7 +1356,7 @@ class OverlayWindow(QMainWindow):
                         update_timestamp = 0
                 else:
                     update_timestamp = 0
-                return (update_timestamp, boss.get('name', '').lower())
+                return (1, update_timestamp, boss.get('name', '').lower())
 
             elif self._sort_column == "status":
                 status = boss.get('status', 'N')
